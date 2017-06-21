@@ -1,0 +1,42 @@
+{
+  "name": "appsupontsheros",
+  "version": "1.0.0",
+  "description": "Application Suponts héros",
+  "author": "N.Lohinski",
+  "license": "ISC",
+  "scripts": {
+    "watch-webpack": "./node_modules/.bin/webpack -w",
+    "build": "./node_modules/.bin/webpack -p",
+    "manifest": "node_modules/.bin/appcache-manifest 'public/**/*.{css,js,ttf,otf,svg,png,jpg,ico,html}' -o public/cache.manifest --network-star --stamp -v",
+    "watch-manifest": "npm run manifest -w",
+    "dev": "./node_modules/.bin/webpack-dev-server"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.0.2",
+    "vue": "^2.3.3"
+  },
+  "devDependencies": {
+    "appcache-webpack-plugin": "^1.3.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.16.1",
+    "eslint-config-google": "^0.7.1",
+    "eslint-config-vue": "^2.0.2",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^2.0.1",
+    "eslint-plugin-vue": "^2.0.1",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "vue-html-loader": "^1.2.4",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.1.10",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
