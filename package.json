@@ -5,11 +5,11 @@
   "author": "N.Lohinski",
   "license": "ISC",
   "scripts": {
-    "watch-webpack": "./node_modules/.bin/webpack -w",
+    "watch": "./node_modules/.bin/webpack -w",
     "build": "./node_modules/.bin/webpack -p",
     "manifest": "node_modules/.bin/appcache-manifest 'public/**/*.{css,js,ttf,otf,svg,png,jpg,ico,html}' -o public/cache.manifest --network-star --stamp -v",
     "watch-manifest": "npm run manifest -w",
-    "dev": "./node_modules/.bin/webpack-dev-server"
+    "webpack-server": "./node_modules/.bin/webpack-dev-server"
   },
   "dependencies": {
     "npm-run-all": "^4.0.2",
