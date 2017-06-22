@@ -1,0 +1,78 @@
+{
+  "popup d'accueil": "Bienvenue dans l'app Suponts'Héros, l'event sportif étudiant regroupant l'ISAE Supaéro et l'Ecole des Ponts-ParisTech. Vous y trouverez les news importantes, le score du tournoi ainsi que les résultats par sport dans la section consacrée. Vous y trouverez également une carte interactive, les contacts en cas d'urgence et un tas d'autres chose alors restez connectés et à  toute sur le campus !",
+  "sections": {
+    "accueil": {
+      "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez vous les 7 et 8 Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
+      "resultats": {
+        "supaero": 0,
+        "ponts": 0
+      }
+    },
+    "informations": {
+      "contacts d'urgence": [
+        { "nom": "Responsable Suponts'Héros", "telephone": "0000000000" },
+        { "nom": "Président de l'AS", "telephone": "0000000000" },
+        { "nom": "Responsable évènements", "telephone": "0000000000" }
+      ],
+      "autres informations": [
+        { "titre": "A l'arrivée samedi matin", "contenu": "A l'arrivée de l'École des Ponts, les packs seront distribués vers le RU avant le petit-déjeuner aux sportifs des Ponts et aux sportifs de Supaéro."},
+        { "titre": "Dépôt des affaires", "contenu": "Les affaires des participants seront stockés dans une salle fermée au gymnase la journée mais accessible par demande à  la table de marque."}
+      ]
+    },
+    "carte": {
+      "position de depart": [43.567111, 1.474581],
+      "zoom de depart": 16,
+      "marqueurs": [
+        {
+          "nom": "Resto U",
+          "position": [43.567035, 1.472583]
+        },
+        {
+          "nom": "Foyer",
+          "position": [43.569769, 1.472101]
+        },
+        {
+          "nom": "Gymnase",
+          "position": [43.565586, 1.476056]
+        },
+        {
+          "nom": "Terrains de tennis",
+          "position": [43.566053, 1.475479]
+        },
+        {
+          "nom": "Piscine",
+          "position": [43.564986, 1.476307]
+        },
+        {
+          "nom": "Edouard Belin Stadium",
+          "position": [43.565044, 1.477066]
+        },
+        {
+          "nom": "Poste de secours",
+          "position": [43.564326, 1.474548]
+        },
+        {
+          "nom": "Poste de garde",
+          "position": [43.566625, 1.474476]
+        }
+      ]
+    },
+    "partenaires": [
+      {
+        "titre": "Les sponsors",
+        "logos": [
+          "https://upload.wikimedia.org/wikipedia/commons/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/3/3d/ISAE_SUPAERO_72_cmjn.png"
+        ],
+        "text": "Nous tenions à  remercier nos deux gros sponsors pour cet événement à  savoir la Société Générale et l'ISAE-Supaero pour nous avoir apporté leur soutien."
+      },
+      {
+        "titre": "L'association sportive",
+        "logos": [
+          "http://files.as-isae.fr/200000131-435f44459c/LogoSiteP.png"
+        ],
+        "text": "C'est elle qui vous permet de passer ce week en toute sérénité et de profiter du campus."
+      }
+    ]
+  }
+}
