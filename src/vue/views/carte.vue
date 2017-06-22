@@ -5,7 +5,7 @@
              :show="error"
              @swipeleft="error = false"
              @tap="error = false">
-      Impossible de te repérer
+      {{ errorMessage }}
     </v-touch>
   </div>
 </template>
@@ -18,6 +18,8 @@
         map: null,
         layer: null,
         error: false,
+        errorMessage: '',
+        userMarker: null,
         pins: []
       };
     },
@@ -46,11 +48,37 @@
         }
       },
       locationFound (e) {
-        this.error = false;
+        if (this.userMarker) this.map.removeLayer(this.userMarker);
         const radius = e.accuracy / 2;
-        L.circle(e.latlng, radius).addTo(this.map);
+        const locationIcon = L.divIcon({
+          html: '<div class="circle"></div><div class="point"></div>',
+          className: 'user-location',
+          iconSize: [radius, radius],
+          iconAnchor: [radius / 2, radius / 2]
+        });
+        this.userMarker = L.marker(e.latlng, { icon: locationIcon });
+        this.map.addLayer(this.userMarker);
+        if (this.isOutOfBound(e.latlng)) {
+          if (this.errorMessage !== 'Tu n\'est pas à proximité du campus') {
+            this.errorMessage = 'Tu n\'est pas à proximité du campus';
+            this.error = true;
+          }
+        } else {
+          this.error = false;
+          setTimeout(() => {
+            this.errorMessage = '';
+          }, 200);
+        }
+      },
+      isOutOfBound (position) {
+        return position['lat'] > 43.574160 ||
+          position['lng'] > 1.478854 ||
+          position['lat'] < 43.561869 ||
+          position['lng'] < 1.468950;
       },
       locationError (e) {
+        if (this.userMarker) this.map.removeLayer(this.marker);
+        this.errorMessage = 'Impossible de te repérer';
         this.error = true;
       }
     },
@@ -75,7 +103,7 @@
       }).addTo(this.map);
       this.map.on('locationfound', this.locationFound);
       this.map.on('locationerror', this.locationError);
-      this.map.locate({ setView: true, maxZoom: 10 });
+      this.map.locate({ maxZoom: 18, watch: true });
       this.refresh(this.markers);
     }
   };
@@ -118,4 +146,31 @@
       font-size: 20px
     .leaflet-popup-tip-container
       top: calc(100% - 1px);
+.user-location
+  position: absolute
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .circle
+    border-radius: 50%
+    border: 2px solid $user-location-color
+    @keyframes dissolve
+      from
+        opacity: 1
+        width: 0
+        height: 0
+      to
+        opacity: 0
+        width: 100%
+        height: 100%
+    animation: 3s dissolve ease infinite
+  .point
+    width: 15px
+    height: 15px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: radial-gradient($user-location-color 50%, rgba(128, 128, 128, 0))
+    border-radius: 50%
 </style>
