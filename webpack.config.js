@@ -1,12 +1,14 @@
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const AppCachePlugin = require('appcache-webpack-plugin');
+
 module.exports = {
   entry: {
-    'index': './src/js/index.js'
+    'app.js': './src/js/index.js'
   },
   output: {
     path: require('path').resolve(__dirname, 'public'),
-    filename: 'app.js'
+    filename: '[name]'
   },
   resolve: {
     alias: {
@@ -19,11 +21,27 @@ module.exports = {
         enforce: 'pre',
         test: /\.(js|vue)$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader'
       },
       {
         test: /\.(jpg|png|svg|ttf|otf)$/,
-        loader: 'file-loader'
+        loader: 'file-loader',
+        options: {
+          name: 'assets/[hash].[ext]'
+        }
+      },
+      {
+        test: /\.html$/,
+        exclude: /node_modules/,
+        use: [{
+          loader: 'html-loader',
+          options: {
+            minimize: true,
+            removeComments: true,
+            collapseWhitespace: true,
+            attrs: ['link:href']
+          },
+        }]
       },
       {
         test: /\.js$/,
@@ -43,19 +61,15 @@ module.exports = {
     ]
   },
   plugins: [
+    new HTMLWebpackPlugin({
+      template: 'src/html/index.html'
+    }),
+    new CopyWebpackPlugin([
+      { from: 'src/json/content.json' }
+    ]),
     new AppCachePlugin({
       exclude: [/.*\.json$/],
       output: 'cache.manifest'
-    }),
-    new HTMLWebpackPlugin({
-      filename: 'index.html',
-      template: 'src/html/index.html',
-      minify: {
-        collapseInlineTagWhitespace: true,
-        collapseWhitespace: true,
-        removeComments: true,
-        removeScriptTypeAttributes: true
-      }
     })
   ]
 };

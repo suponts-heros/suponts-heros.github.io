@@ -1,20 +1,29 @@
 <template>
-  <div class="slide-menu"
-       :opened="open">
-    <div class="black-veil"
-         @click="open=false">
-    </div>
-    <div class="content">
-      <div class="toggle"
-           @click="open=!open">
-      </div>
-      <div class="item" v-for="item in items"
-           @click="selectItem(item)">
+  <v-touch tag="div"  class="slide-menu"
+       :opened="open"
+       @swipedown="open=false">
+    <v-touch tag="div" class="black-veil"
+         @tap="open=false">
+    </v-touch>
+    <v-touch tag="div"
+             class="content"
+             @swipeup="open=true">
+      <div class="curve"></div>
+      <v-touch tag="div" class="toggle"
+           @tap="open=!open">
+        <i class="closed"></i>
+        <i class="opened"></i>
+      </v-touch>
+      <v-touch tag="div"
+               class="item"
+               v-for="item in items"
+               :key="item.class"
+               @tap="selectItem(item)">
         <div :class="`icon ${ item.class }`"></div>
         <div class="title">{{ item.title }}</div>
-      </div>
-    </div>
-  </div>
+      </v-touch>
+    </v-touch>
+  </v-touch>
 </template>
 <script>
   export default {
@@ -22,8 +31,10 @@
       return {
         open: false,
         items: [
-          { 'title': 'Accueil', 'class': 'home' },
-          { 'title': 'Informations', 'class': 'info' }
+          { 'title': 'Accueil', 'class': 'accueil' },
+          { 'title': 'Informations', 'class': 'informations' },
+          { 'title': 'Carte', 'class': 'carte' },
+          { 'title': 'Partenaires', 'class': 'partenaires' }
         ]
       };
     },
@@ -44,16 +55,19 @@
     height: 100%
     pointer-events: none
     &[opened]
-      pointer-events: auto
       .black-veil
         opacity: 1
+        pointer-events: auto
       .content
         transform: none
         .toggle
-          background: url(../img/chevron-down.svg) no-repeat center
-          background-size: 50%
-          background-color: inherit
+          i.closed
+            opacity: 1
+          i.opened
+            opacity: 0
     .black-veil
+      position: fixed
+      pointer-events: none
       width: 100%
       height: 100%
       opacity: 0
@@ -69,16 +83,23 @@
       font-family: DefaultFont
       transform: translateY(100%)
       @include using-transition(transform)
-      &:before
-        content: ''
+      pointer-events: auto
+      .curve
         position: absolute
         top: 0
         left: 0
-        height: 80px
+        height: 160px
         width: 100%
-        border-radius: 50%
-        background-color: inherit
         transform: translateY(-50%)
+        &:before
+          content: ''
+          position: absolute
+          left: 0
+          top: 40px
+          height: 80px
+          width: 100%
+          border-radius: 50%
+          background-color: $background-theme
       .toggle
         position: absolute
         top: 0
@@ -89,23 +110,46 @@
         height: 40px
         border-radius: 50%
         border: 1px solid $border-default-color
-        background: url(../img/menu.svg) no-repeat center
-        background-size: 50%
         background-color: inherit
-        pointer-events: auto
+        i
+          position: absolute
+          display: block
+          width: 100%
+          height: 100%
+          @include using-transition(opacity)
+          &.closed
+            opacity: 0
+            background: url(../img/chevron-down.svg) no-repeat center
+            background-size: 50%
+          &.opened
+            opacity: 1
+            @include using-transition(opacity)
+            background: url(../img/menu.svg) no-repeat center
+            background-size: 50%
+
       > .item
         margin: 15px
+        text-align: center
         display: inline-block
-        position: relative;
+        position: relative
         color: $text-on-theme
         font-size: 15px
+        min-width: 90px
+        min-height: 90px
         .icon
           width: 70px
           height: 70px
-        > .home.icon
+          display: inline-block
+        > .accueil.icon
           background: url(../img/home.svg) center no-repeat
-          background-size: 80%
-        > .info.icon
-              background: url(../img/info.svg) center no-repeat
-              background-size: 80%
+          background-size: 100%
+        > .informations.icon
+          background: url(../img/info.svg) center no-repeat
+          background-size: 100%
+        > .carte.icon
+          background: url(../img/map.svg) center no-repeat
+          background-size: 100%
+        > .partenaires.icon
+          background: url(../img/sponsors.svg) center no-repeat
+          background-size: 100%
 </style>
