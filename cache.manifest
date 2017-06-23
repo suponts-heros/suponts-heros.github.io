@@ -1,19 +1,45 @@
 CACHE MANIFEST
-# ad538b24ce070bcec6fd
+# f6df26cbb05c38707a8b
 
-assets/4d462eebd4a2576f8b3bec7ba270afde.png
-assets/3e1206bec70bbd2121f053836843194d.png
-assets/1c130a30e9c2f49f9ebcefe252048bee.png
-assets/14e33b128bb607524ccd470607debe11.png
-assets/3573b8c213dae92ba5150e2d9e22e812.png
-assets/b1e8aed5bf11680ed381451890284221.png
-assets/040a445806317934a8a1461dd6b19f9d.png
-assets/7b22bac6e1f9cb8e19b0bac1c4bb448d.png
-assets/a0557ea307d3eaaaa0477b7d1b52bac0.png
-assets/e4f2ebf52e7da19247e6c59a3dcf3160.png
-assets/b312834fa1c9d832601f5302acfbcabc.png
-assets/4e87b256da83c62f30b15876493241fe.png
-assets/74de26fee49f9d4927b13f2120ad3618.png
+assets/apple-touch-icon-57x57.png
+assets/apple-touch-icon-60x60.png
+assets/apple-touch-icon-72x72.png
+assets/apple-touch-icon-76x76.png
+assets/apple-touch-icon-114x114.png
+assets/apple-touch-icon-120x120.png
+assets/apple-touch-icon-144x144.png
+assets/apple-touch-icon-152x152.png
+assets/apple-touch-icon-167x167.png
+assets/apple-touch-icon-180x180.png
+assets/apple-touch-icon.png
+assets/apple-touch-icon-precomposed.png
+assets/android-chrome-36x36.png
+assets/android-chrome-48x48.png
+assets/android-chrome-72x72.png
+assets/android-chrome-96x96.png
+assets/android-chrome-144x144.png
+assets/android-chrome-192x192.png
+assets/android-chrome-256x256.png
+assets/android-chrome-384x384.png
+assets/android-chrome-512x512.png
+assets/favicon-16x16.png
+assets/favicon-32x32.png
+assets/favicon.ico
+assets/firefox_app_60x60.png
+assets/firefox_app_128x128.png
+assets/firefox_app_512x512.png
+assets/apple-touch-startup-image-320x460.png
+assets/apple-touch-startup-image-640x1096.png
+assets/apple-touch-startup-image-748x1024.png
+assets/apple-touch-startup-image-640x920.png
+assets/apple-touch-startup-image-750x1294.png
+assets/apple-touch-startup-image-768x1004.png
+assets/apple-touch-startup-image-1242x2148.png
+assets/apple-touch-startup-image-1182x2208.png
+assets/apple-touch-startup-image-1496x2048.png
+assets/apple-touch-startup-image-1536x2008.png
+assets/manifest.webapp
+assets/.cache
 assets/4f0283c6ce28e888000e978e537a6a56.png
 assets/a6137456ed160d7606981aa57c559898.png
 assets/2273e3d8ad9264b7daa5bdbf8e6b47f8.png
@@ -24,6 +50,7 @@ assets/cd3adf91cadfacb24b6da08b727884a8.svg
 assets/cbccee46afa9cce7cddec75df9dc9bef.svg
 assets/07d56a95bd69b1dfa20056c3cb631216.svg
 assets/de8ef86ab36ba102e2622e2fae36dc99.svg
+assets/88e2c508938326f93482b6da7e2adafb.png
 assets/bafba784f3ad998e1c7de8118e698d61.svg
 assets/873bea97530b4e39cdff9a70bcc1f133.svg
 assets/1f06ff3455730b135eece779ed3d397b.svg
