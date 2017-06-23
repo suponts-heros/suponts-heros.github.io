@@ -36,7 +36,7 @@
   };
 </script>
 <style lang="sass" type="text/sass" scoped>
-  @import '../sass/general'
+  @import '../../sass/general'
   .popup
     z-index: 100
     position: fixed

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="informations">
     <h2>Contacts d'urgences</h2>
     <ul>
       <li v-for="contact in contacts">
@@ -30,7 +30,7 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .home
+  .informations
     padding: 0 15px
     margin: 0 auto
     max-width: $max-width

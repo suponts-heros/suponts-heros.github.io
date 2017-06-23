@@ -21,16 +21,17 @@
         </v-touch>
       </div>
     </popup>
-    <slide-menu @view="(v) => view = v"></slide-menu>
+    <slide-menu @view="changeView"></slide-menu>
   </div>
 </template>
 <script>
   import SlideMenu from './slide-menu.vue';
-  import Popup from './popup.vue';
+  import Popup from './utils/popup.vue';
   import accueil from './views/accueil.vue';
   import informations from './views/informations.vue';
   import carte from './views/carte.vue';
   import partenaires from './views/partenaires.vue';
+  import planning from './views/planning.vue';
   export default {
     data () {
       return {
@@ -40,6 +41,12 @@
           hidePopup: false
         }
       };
+    },
+    methods: {
+      changeView (newView) {
+        this.view = newView;
+        document.getElementById('view-container').scrollTop = 0;
+      }
     },
     computed: {
       textIntroPopup () {
@@ -52,7 +59,8 @@
       accueil,
       informations,
       carte,
-      partenaires
+      partenaires,
+      planning
     },
     watch: {
       session: {

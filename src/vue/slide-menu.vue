@@ -33,6 +33,7 @@
         items: [
           { 'title': 'Accueil', 'class': 'accueil' },
           { 'title': 'Informations', 'class': 'informations' },
+          { 'title': 'Planning', 'class': 'planning' },
           { 'title': 'Carte', 'class': 'carte' },
           { 'title': 'Partenaires', 'class': 'partenaires' }
         ]
@@ -140,16 +141,19 @@
           width: 70px
           height: 70px
           display: inline-block
-        > .accueil.icon
-          background: url(../img/home.svg) center no-repeat
-          background-size: 100%
-        > .informations.icon
-          background: url(../img/info.svg) center no-repeat
-          background-size: 100%
-        > .carte.icon
-          background: url(../img/map.svg) center no-repeat
-          background-size: 100%
-        > .partenaires.icon
-          background: url(../img/sponsors.svg) center no-repeat
-          background-size: 100%
+          &.accueil
+            background: url(../img/home.svg) center no-repeat
+            background-size: 100%
+          &.informations
+            background: url(../img/info.svg) center no-repeat
+            background-size: 100%
+          &.carte
+            background: url(../img/map.svg) center no-repeat
+            background-size: 100%
+          &.partenaires
+            background: url(../img/sponsors.svg) center no-repeat
+            background-size: 100%
+          &.planning
+            background: url(../img/planning.svg) center no-repeat
+            background-size: 100%
 </style>

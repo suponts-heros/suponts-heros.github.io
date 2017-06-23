@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="accueil">
     <h2>News</h2>
     <p>{{ news }}</p>
     <h2>Résultats</h2>
@@ -30,7 +30,7 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .home
+  .accueil
     padding: 0 15px
     margin: 0 auto
     max-width: $max-width

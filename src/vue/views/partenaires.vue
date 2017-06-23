@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
+  <div class="partenaires">
     <template v-for="section in sponsors">
       <h2>{{ section.titre }}</h2>
-      <p>{{ section.text }}</p>
+      <p>{{ section.texte }}</p>
       <img v-for="url in section.logos"
             class="logo"
             :src="url">
     </template>
       <h2>{{ as.titre }}</h2>
-      <p>{{ as.text }}</p>
+      <p>{{ as.texte }}</p>
       <img class="logo" :src="require('../../img/logo-as-2017.png')">
   </div>
 </template>
@@ -37,7 +37,7 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .home
+  .partenaires
     padding: 0 15px
     margin: 0 auto
     max-width: $max-width
