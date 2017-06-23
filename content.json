@@ -19,6 +19,31 @@
         { "titre": "Dépôt des affaires", "contenu": "Les affaires des participants seront stockés dans une salle fermée au gymnase la journée mais accessible par demande à  la table de marque."}
       ]
     },
+    "planning": {
+      "samedi": [
+        { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner au RU" },
+        { "heure": "10:00", "texte": "Volley M et Escalade au gymnase et foot libre sur le stade" },
+        { "heure": "11:00", "texte": "Volley F et Badminton au gymnase" },
+        { "heure": "12:00", "texte": "Basket M au gymnase" },
+        { "heure": "13:00", "texte": "Déjeuner près du gymnase" },
+        { "heure": "14:00", "texte": "Basket F et Escalade au gymnase, et Natation à la piscine" },
+        { "heure": "15:00", "texte": "Hand F au gymnase, et Waterpolo à la piscinee" },
+        { "heure": "16:00", "texte": "Hand M au gymnase et Rugby F sur le stade, et nage libre à la piscine" },
+        { "heure": "17:00", "texte": "Rugby M sur le stade et goûter près du gymnase" },
+        { "heure": "18:30", "texte": "Show PomPoms au gymnase" },
+        { "heure": "19:00", "texte": "Temps de repos (douches, etc...)" },
+        { "heure": "20:00", "texte": "Dîner au RU" },
+        { "heure": "22:00", "texte": "Début de la soirée Pilote ou BTP à la MDE" }
+      ],
+      "dimanche": [
+         { "heure": "8:30", "texte": "Réveil pui petit-déjeuner" },
+         { "heure": "10:00", "texte": "Foot F sur le stade" },
+         { "heure": "11:00", "texte": "Foot M sur le stade" },
+         { "heure": "12:30", "texte": "BBQ près du gymnase" },
+         { "heure": "14:00", "texte": "Remise de prix" },
+         { "heure": "15:00", "texte": "Fin du tournoi" }
+      ]
+    },
     "carte": {
       "position de depart": [43.567111, 1.474581],
       "zoom de depart": 16,
@@ -64,11 +89,11 @@
           "https://upload.wikimedia.org/wikipedia/commons/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg",
           "https://upload.wikimedia.org/wikipedia/commons/3/3d/ISAE_SUPAERO_72_cmjn.png"
         ],
-        "text": "Nous tenions à  remercier nos deux gros sponsors pour cet événement à  savoir la Société Générale et l'ISAE-Supaero pour nous avoir apporté leur soutient."
+        "texte": "Nous tenions à  remercier nos deux gros sponsors pour cet événement à  savoir la Société Générale et l'ISAE-Supaero pour nous avoir apporté leur soutient."
       }],
       "l'AS": {
         "titre": "L'association sportive",
-        "text": "C'est elle qui vous permet de passer ce week en toute sérénité et de profiter du campus."
+        "texte": "C'est elle qui vous permet de passer ce week en toute sérénité et de profiter du campus."
       }
     }
   }

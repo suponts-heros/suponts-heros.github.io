@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# eebfe63c2d1aa2fd5899
+# c96514b6c76e13516ecf
 
 assets/apple-touch-icon-57x57.png
 assets/apple-touch-icon-60x60.png
@@ -8,9 +8,9 @@ assets/apple-touch-icon-76x76.png
 assets/apple-touch-icon-114x114.png
 assets/apple-touch-icon-120x120.png
 assets/apple-touch-icon-152x152.png
+assets/apple-touch-icon-167x167.png
 assets/apple-touch-icon-144x144.png
 assets/apple-touch-icon-180x180.png
-assets/apple-touch-icon-167x167.png
 assets/apple-touch-icon.png
 assets/apple-touch-icon-precomposed.png
 assets/android-chrome-36x36.png
@@ -30,10 +30,10 @@ assets/firefox_app_128x128.png
 assets/firefox_app_512x512.png
 assets/apple-touch-startup-image-320x460.png
 assets/apple-touch-startup-image-640x1096.png
-assets/apple-touch-startup-image-748x1024.png
-assets/apple-touch-startup-image-640x920.png
-assets/apple-touch-startup-image-768x1004.png
 assets/apple-touch-startup-image-750x1294.png
+assets/apple-touch-startup-image-640x920.png
+assets/apple-touch-startup-image-748x1024.png
+assets/apple-touch-startup-image-768x1004.png
 assets/apple-touch-startup-image-1182x2208.png
 assets/apple-touch-startup-image-1242x2148.png
 assets/apple-touch-startup-image-1496x2048.png
@@ -52,6 +52,7 @@ assets/de8ef86ab36ba102e2622e2fae36dc99.svg
 assets/88e2c508938326f93482b6da7e2adafb.png
 assets/bafba784f3ad998e1c7de8118e698d61.svg
 assets/873bea97530b4e39cdff9a70bcc1f133.svg
+assets/25d87ad57fff3788c6184a4d51151a70.svg
 assets/1f06ff3455730b135eece779ed3d397b.svg
 assets/b94adb0ea37ffbf55d86c74d553af4b5.svg
 assets/c38165c78e58b3bb1aaa96ad2884e50f.svg
