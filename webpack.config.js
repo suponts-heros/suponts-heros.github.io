@@ -1,7 +1,8 @@
+const Webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const AppCachePlugin = require('appcache-webpack-plugin');
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 module.exports = {
   entry: {
     'app.js': './src/js/index.js'
@@ -61,6 +62,16 @@ module.exports = {
     ]
   },
   plugins: [
+    new FaviconsWebpackPlugin({
+      logo: './src/img/suponts-heros-logo.png',
+      prefix: 'assets/',
+      emitStats: false,
+      statsFilename: 'assets/[hash].json',
+      persistentCache: false,
+      inject: true,
+      background: '#fff',
+      title: 'Suponts\'Héros'
+    }),
     new HTMLWebpackPlugin({
       template: 'src/html/index.html'
     }),
@@ -70,6 +81,11 @@ module.exports = {
     new AppCachePlugin({
       exclude: [/.*\.json$/],
       output: 'cache.manifest'
+    }),
+    new Webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
     })
   ]
 };

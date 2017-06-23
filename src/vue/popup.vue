@@ -64,8 +64,9 @@
       position: absolute
       width: 90vw
       overflow: hidden
-      max-width: $max-width
-      height: 90vh
+      max-width: 600px;
+      max-height: 90vh;
+      padding-bottom: 150px;
       top: 50%
       left: 50%
       background: $background-base

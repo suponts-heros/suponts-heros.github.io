@@ -118,10 +118,8 @@
     left: 50%
     transform: translateX(-50%)
     height: 100%
-    width: calc(100% - 30px)
     display: block
-    padding: 0 15px
-    max-width: $max-width
+    width: 100%
     overflow-y: auto
     -webkit-overflow-scrolling: touch
     > *

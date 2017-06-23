@@ -98,7 +98,7 @@
       // Initialize map
       this.map = L.map(this.mapId).setView(this.view, this.zoom);
       // Create the terrain
-      L.tileLayer('http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
+      L.tileLayer('https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', {
         maxZoom: 18
       }).addTo(this.map);
       this.map.on('locationfound', this.locationFound);
@@ -115,7 +115,6 @@
   width: 100%
   height: 100%
   position: fixed !important
-  margin: 0 -15px
   padding-bottom: 10px !important
   .error
     position: absolute
@@ -145,13 +144,15 @@
       padding: 5px
       font-size: 20px
     .leaflet-popup-tip-container
-      top: calc(100% - 1px);
+      top: calc(100% - 1px)
 .user-location
   position: absolute
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 9999 !important
   .circle
+    position: absolute
     border-radius: 50%
     border: 2px solid $user-location-color
     @keyframes dissolve
@@ -159,10 +160,14 @@
         opacity: 1
         width: 0
         height: 0
+        min-width: 0
+        min-height: 0
       to
         opacity: 0
-        width: 100%
-        height: 100%
+        width: 150%
+        min-width: 20px
+        min-height: 20px
+        height: 150%
     animation: 3s dissolve ease infinite
   .point
     width: 15px

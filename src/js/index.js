@@ -53,7 +53,7 @@ global.store = new Vuex.Store({
   }
 });
 
-new Vue({
+global.vm = new Vue({
   el: '#app-container',
   data () {
     return {
@@ -66,7 +66,9 @@ new Vue({
   store: global.store,
   mounted () {
     this.$store.dispatch('requestContent', () => {
-      this.loading = false;
+      setTimeout(() => {
+        this.loading = false;
+      }, 200);
     });
   }
 });
