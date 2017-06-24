@@ -21,17 +21,18 @@
         </v-touch>
       </div>
     </popup>
-    <slide-menu @view="changeView"></slide-menu>
+    <v-menu @view="changeView"></v-menu>
   </div>
 </template>
 <script>
-  import SlideMenu from './slide-menu.vue';
+  import Menu from './menu.vue';
   import Popup from './utils/popup.vue';
   import accueil from './views/accueil.vue';
   import informations from './views/informations.vue';
   import carte from './views/carte.vue';
   import partenaires from './views/partenaires.vue';
   import planning from './views/planning.vue';
+  import sports from './views/sports.vue';
   export default {
     data () {
       return {
@@ -53,13 +54,14 @@
       }
     },
     components: {
-      'slide-menu': SlideMenu,
+      'v-menu': Menu,
       'popup': Popup,
       accueil,
       informations,
       carte,
       partenaires,
-      planning
+      planning,
+      sports
     },
     watch: {
       session: {

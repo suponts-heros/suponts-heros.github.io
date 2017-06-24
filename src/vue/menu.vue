@@ -32,6 +32,7 @@
           { 'title': 'Accueil', 'class': 'accueil' },
           { 'title': 'Informations', 'class': 'informations' },
           { 'title': 'Planning', 'class': 'planning' },
+          { 'title': 'Sports', 'class': 'sports' },
           { 'title': 'Carte', 'class': 'carte' },
           { 'title': 'Partenaires', 'class': 'partenaires' }
         ]
@@ -153,5 +154,8 @@
             background-size: 100%
           &.planning
             background: url(../img/planning.svg) center no-repeat
+            background-size: 100%
+          &.sports
+            background: url(../img/sports.svg) center no-repeat
             background-size: 100%
 </style>

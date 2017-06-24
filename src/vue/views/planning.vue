@@ -60,9 +60,7 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .planning
-    margin-top: 60px
-    .body
+  .planning .body
       margin-bottom: 115px
       table
         margin-top: 5px
