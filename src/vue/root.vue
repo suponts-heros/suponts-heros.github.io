@@ -1,6 +1,6 @@
 <template>
   <div class="root">
-    <section id="view-container">
+    <section>
       <component :is="view">
       </component>
     </section>
@@ -45,7 +45,6 @@
     methods: {
       changeView (newView) {
         this.view = newView;
-        document.getElementById('view-container').scrollTop = 0;
       }
     },
     computed: {
@@ -72,25 +71,6 @@
     },
     store: global.store,
     mounted () {
-      // To fix the damn scrolling on iOS
-      const viewContainer = document.getElementById('view-container');
-      let _clientY = null;
-      viewContainer.addEventListener('touchstart', (event) => {
-        if (event.targetTouches.length === 1) {
-          _clientY = event.targetTouches[0].clientY;
-        }
-      }, false);
-      viewContainer.addEventListener('touchmove', (event) => {
-        if (event.targetTouches.length === 1) {
-          const clientY = event.targetTouches[0].clientY - _clientY;
-          if (viewContainer.scrollTop === 0 && clientY > 0) {
-            event.preventDefault();
-          }
-          if (viewContainer.scrollHeight - viewContainer.scrollTop <= viewContainer.clientHeight && clientY < 0) {
-            event.preventDefault();
-          }
-        }
-      }, false);
       // Get session
       if (localStorage['session']) {
         this.session = JSON.parse(localStorage['session']);
@@ -128,10 +108,6 @@
     height: 100%
     display: block
     width: 100%
-    overflow-y: auto
-    -webkit-overflow-scrolling: touch
-    > *
-      padding-bottom: 75px
   .intro-popup
     color: $text-default
     font-family: DefaultFont, sans-serif

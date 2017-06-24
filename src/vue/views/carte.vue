@@ -116,6 +116,8 @@
   height: 100%
   position: fixed !important
   padding-bottom: 10px !important
+  .leaflet-top.leaflet-left
+    top: 10px !important
   .error
     position: absolute
     bottom: 80px

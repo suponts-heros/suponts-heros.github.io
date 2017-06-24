@@ -36,7 +36,7 @@
         { "heure": "22:00", "texte": "Début de la soirée Pilote ou BTP à la MDE" }
       ],
       "dimanche": [
-         { "heure": "8:30", "texte": "Réveil pui petit-déjeuner" },
+         { "heure": "8:30", "texte": "Réveil puis petit-déjeuner" },
          { "heure": "10:00", "texte": "Foot F sur le stade" },
          { "heure": "11:00", "texte": "Foot M sur le stade" },
          { "heure": "12:30", "texte": "BBQ près du gymnase" },

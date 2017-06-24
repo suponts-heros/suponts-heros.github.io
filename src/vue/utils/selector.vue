@@ -29,8 +29,10 @@
 <style lang="sass" type="text/sass" rel="stylesheet/sass" scoped>
   @import '../../sass/general'
   .bottom-selector
+    padding-top: 10px
     width: 100%
     position: absolute
+    z-index: 11
     top: 0
     left: 0
     background: $background-base-2

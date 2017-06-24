@@ -5,10 +5,8 @@
     <v-touch tag="div" class="black-veil"
          @tap="open=false">
     </v-touch>
-    <v-touch tag="div"
-             class="content"
-             @swipeup="open=true">
-      <div class="curve"></div>
+    <div class="content">
+      <v-touch tag="div" class="curve" @tap="open=!open"></v-touch>
       <v-touch tag="div" class="toggle"
            @tap="open=!open">
         <i class="closed"></i>
@@ -22,7 +20,7 @@
         <div :class="`icon ${ item.class }`"></div>
         <div class="title">{{ item.title }}</div>
       </v-touch>
-    </v-touch>
+    </div>
   </v-touch>
 </template>
 <script>
@@ -89,14 +87,14 @@
         position: absolute
         top: 0
         left: 0
-        height: 160px
+        height: 80px
         width: 100%
         transform: translateY(-50%)
         &:before
           content: ''
           position: absolute
           left: 0
-          top: 40px
+          top: 0
           height: 80px
           width: 100%
           border-radius: 50%

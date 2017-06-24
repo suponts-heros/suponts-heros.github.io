@@ -2,6 +2,9 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import VueTouch from 'vue-touch';
 Vue.use(Vuex);
+VueTouch.config.swipe = {
+  direction: 'horizontal'
+};
 Vue.use(VueTouch, { name: 'v-touch' });
 import Root from '../vue/root.vue';
 
