@@ -29,9 +29,8 @@
 <style lang="sass" type="text/sass" rel="stylesheet/sass" scoped>
   @import '../../sass/general'
   .bottom-selector
-    padding-bottom: 40px
     width: 100%
-    position: absolute
+    position: fixed
     z-index: 11
     bottom: 0
     left: 0
@@ -39,13 +38,15 @@
     text-align: center
     display: flex
     justify-content: space-around
+    overflow: hidden
     button
       background: none
       border: none
       color: $text-default
       font-size: 15px
-      padding: 15px 5px
+      padding: 15px 5px 55px 5px
       text-transform: capitalize
+      overflow: hidden
       @include using-transition(all)
       opacity: 0.4
       outline: none

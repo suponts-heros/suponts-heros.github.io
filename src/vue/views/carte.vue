@@ -11,6 +11,11 @@
 </template>
 <script>
   import 'leaflet';
+  const SpecialMarker = L.Marker.extend({
+    options: {
+      place: {}
+    }
+  });
   export default {
     data () {
       return {
@@ -23,29 +28,46 @@
         pins: []
       };
     },
+    props: {
+      specificOpen: {
+        type: String,
+        default: ''
+      }
+    },
     methods: {
       refresh (markers) {
         if (this.layer && this.map) this.map.removeLayer(this.layer);
         const layer = [];
         markers.forEach((e) => {
-          layer.push(
-            L.marker(e['position'], {
-              icon: L.icon({
-                iconUrl: require('../../img/location.svg'),
-                iconSize: [35, 40],
-                iconAnchor: [19, 33],
-                popupAnchor: [0, -18]
-              })
-            }).bindPopup(e['nom'], {
-              className: 'custom-marker-popup'
-            })
-          );
+          let icon = require('../../img/location.svg');
+          if (e['important']) {
+            icon = require('../../img/location-important.svg');
+          }
+          const marker = new SpecialMarker(e['position'], {
+            icon: L.icon({
+              iconUrl: icon,
+              iconSize: [35, 40],
+              iconAnchor: [19, 33],
+              popupAnchor: [0, -18]
+            }),
+            place: e
+          }).bindPopup(e['nom'].charAt(0).toUpperCase() + e['nom'].slice(1), {
+            className: 'custom-marker-popup'
+          });
+          layer.push(marker);
         });
         this.layer = L.layerGroup(layer);
         if (this.map) {
           this.map.addLayer(this.layer);
           this.map.setZoom(this.zoom);
         }
+        setTimeout(() => {
+          if (this.specificOpen !== '') {
+            this.layer.getLayers().find((e) => {
+              return e.options.place.nom === this.specificOpen;
+            }).openPopup();
+          }
+        }, 200);
       },
       locationFound (e) {
         if (this.userMarker) this.map.removeLayer(this.userMarker);

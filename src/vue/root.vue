@@ -1,7 +1,10 @@
 <template>
   <div class="root">
     <section>
-      <component :is="view">
+      <component :is="view"
+                 @plan="showDate"
+                 @show="showLocation"
+                 :specific-open="specificOpen">
       </component>
     </section>
     <popup :open="introPopup">
@@ -38,6 +41,7 @@
       return {
         view: 'accueil',
         introPopup: true,
+        specificOpen: '',
         session: {
           hidePopup: false
         }
@@ -46,6 +50,15 @@
     methods: {
       changeView (newView) {
         this.view = newView;
+        this.specificOpen = '';
+      },
+      showLocation (name) {
+        this.changeView('carte');
+        this.specificOpen = name;
+      },
+      showDate (name) {
+        this.changeView('planning');
+        this.specificOpen = name;
       }
     },
     computed: {
