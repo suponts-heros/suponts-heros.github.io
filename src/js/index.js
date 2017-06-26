@@ -84,3 +84,7 @@ window.onload = () => {
   loadingStatus = false;
   if (!vueLoadingStatus) global.vm['loading'] = false;
 };
+window.applicationCache.addEventListener('updateready', () => window.location.reload());
+if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
+  window.location.reload();
+}

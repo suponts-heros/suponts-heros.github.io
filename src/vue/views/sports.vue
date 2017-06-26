@@ -171,10 +171,11 @@
       position: fixed
       width: calc(100% - 30px)
       height: 100%
-      transform: translateX(-100vw)
+      left: 50%
+      transform: translateX(-150vw)
       @include using-transition(transform)
       &[show]
-        transform: translateX(0)
+        transform: translateX(-50%)
       .body
         text-align: center
         .sport
@@ -200,10 +201,11 @@
       position: fixed
       height: 100%
       width: calc(100% - 30px)
-      transform: translateX(100vw)
+      transform: translateX(150vw)
+      left: 50%
       @include using-transition(transform)
       &[show]
-        transform: translateX(0)
+        transform: translateX(-50%)
       .go-back
         position: absolute
         top: -5px

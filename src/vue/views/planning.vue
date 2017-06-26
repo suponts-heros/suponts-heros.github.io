@@ -39,7 +39,6 @@
     computed: {
       specificOpenParsed () {
         const array = this.specificOpen.split(' - ');
-        console.log(array);
         return {
           day: array[0],
           heure: array[1]
