@@ -1,0 +1,5 @@
+@import '../../node_modules/add-to-homescreen/dist/style/addtohomescreen.css';
+.ath-container {
+    border-radius: 4px !important;
+    color: #666 !important;
+}

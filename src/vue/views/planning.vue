@@ -97,8 +97,9 @@
         tr
           height: 50px
           td
+            text-align: left
             padding: 5px 10px
-            font-size: 13px
+            font-size: 17px
             min-height: 50px
             &.hour
               font-family: BoldFont

@@ -37,6 +37,7 @@
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
   .informations
+    font-size: $default-text-size
     .body
       h2
         text-align: center

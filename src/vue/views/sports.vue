@@ -219,10 +219,11 @@
           white-space: nowrap
           .place, .date
             .text
+              font-size: 20px
               display: inline-block
             .icon
-              width: 30px
-              height: 30px
+              width: 40px
+              height: 40px
               display: inline-block
               vertical-align: middle
               margin-right: 10px
@@ -233,7 +234,7 @@
             background: url('../../img/show-planning.svg') center no-repeat
             background-size: 100%
       .format
-        font-size: 13px
+        font-size: 17px
       h3
         text-align: center
       h2
@@ -247,12 +248,11 @@
         text-align: center
         > div
           display: inline-block
-          margin: 0 15px
           .icon
             width: 100px
             height: 100px
           .score
-            font-size: $title-text-size
+            font-size: 30px
           &.ponts .icon
             background: url(../../img/ponts.svg) center no-repeat
             background-size: 80%

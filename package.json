@@ -11,6 +11,7 @@
     "watch": "npm run webpack -- -w"
   },
   "dependencies": {
+    "add-to-homescreen": "^3.2.6",
     "leaflet": "^1.0.3",
     "vue": "^2.3.3",
     "vue-touch": "git://github.com/vuejs/vue-touch.git#next",

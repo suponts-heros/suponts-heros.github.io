@@ -2,7 +2,7 @@
   <scroll-body class="accueil">
     <div class="body" slot="content">
       <h2>News</h2>
-      <p>{{ news }}</p>
+      <p class="news">{{ news }}</p>
       <h2>Résultats</h2>
       <div class="results">
         <div class="ponts">
@@ -41,6 +41,8 @@
       text-align: center
       color: $text-title
       font-size: $title-text-size
+    .news
+      font-size: $default-text-size
     .results
       width: 100%
       text-align: center
@@ -51,7 +53,7 @@
           width: 100px
           height: 100px
         .score
-          font-size: $title-text-size
+          font-size: 30px
         &.ponts .icon
             background: url(../../img/ponts.svg) center no-repeat
             background-size: 80%

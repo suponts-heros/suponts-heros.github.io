@@ -21,11 +21,15 @@ module.exports = {
       {
         enforce: 'pre',
         test: /\.(js|vue)$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /\.min.js$/],
         loader: 'eslint-loader'
       },
       {
-        test: /\.(jpg|png|svg|ttf|otf)$/,
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(png|jpg|svg|ttf|otf|min.js)$/,
         loader: 'file-loader',
         options: {
           name: 'assets/[hash].[ext]'
@@ -40,7 +44,7 @@ module.exports = {
             minimize: true,
             removeComments: true,
             collapseWhitespace: true,
-            attrs: ['link:href']
+            attrs: ['link:href', 'script:src'],
           },
         }]
       },
@@ -70,7 +74,7 @@ module.exports = {
       persistentCache: false,
       inject: true,
       background: '#fff',
-      title: 'Suponts\'Héros'
+      title: 'Suponts'
     }),
     new HTMLWebpackPlugin({
       template: 'src/html/index.html'

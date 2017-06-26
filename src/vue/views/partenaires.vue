@@ -43,13 +43,15 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .partenaires .body h2
-    text-align: center
-    color: $text-title
-    font-size: $title-text-size
-    margin-top: 30px
-    &:first-child
-      margin-top: 15px
+  .partenaires
+    font-size: $default-text-size
+    .body h2
+      text-align: center
+      color: $text-title
+      font-size: $title-text-size
+      margin-top: 30px
+      &:first-child
+        margin-top: 15px
   .logo
     display: block
     width: 80vw

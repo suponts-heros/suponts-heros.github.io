@@ -7,6 +7,10 @@ VueTouch.config.swipe = {
 };
 Vue.use(VueTouch, { name: 'v-touch' });
 import Root from '../vue/root.vue';
+import '../css/addtohomescreen.css';
+
+let loadingStatus = true;
+let vueLoadingStatus = true;
 
 global.store = new Vuex.Store({
   state: {
@@ -70,8 +74,13 @@ global.vm = new Vue({
   mounted () {
     this.$store.dispatch('requestContent', () => {
       setTimeout(() => {
-        this.loading = false;
+        vueLoadingStatus = false;
+        if (!loadingStatus) this.loading = false;
       }, 200);
     });
   }
 });
+window.onload = () => {
+  loadingStatus = false;
+  if (!vueLoadingStatus) global.vm['loading'] = false;
+};

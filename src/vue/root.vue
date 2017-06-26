@@ -49,8 +49,11 @@
     },
     methods: {
       changeView (newView) {
-        this.view = newView;
+        this.view = '';
         this.specificOpen = '';
+        setTimeout(() => {
+          this.view = newView;
+        });
       },
       showLocation (name) {
         this.changeView('carte');
