@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# bad643f5207425a0bf5b
+# 8b438fc3a4544f3fc005
 
 assets/a2c9e82eed5c98cc3c1451bb4be7387c.js
 assets/apple-touch-icon-57x57.png
@@ -30,15 +30,15 @@ assets/firefox_app_60x60.png
 assets/firefox_app_128x128.png
 assets/firefox_app_512x512.png
 assets/apple-touch-startup-image-320x460.png
-assets/apple-touch-startup-image-748x1024.png
-assets/apple-touch-startup-image-640x1096.png
 assets/apple-touch-startup-image-640x920.png
+assets/apple-touch-startup-image-640x1096.png
+assets/apple-touch-startup-image-748x1024.png
 assets/apple-touch-startup-image-750x1294.png
 assets/apple-touch-startup-image-768x1004.png
-assets/apple-touch-startup-image-1182x2208.png
 assets/apple-touch-startup-image-1242x2148.png
-assets/apple-touch-startup-image-1496x2048.png
+assets/apple-touch-startup-image-1182x2208.png
 assets/apple-touch-startup-image-1536x2008.png
+assets/apple-touch-startup-image-1496x2048.png
 assets/manifest.webapp
 assets/1f06ff3455730b135eece779ed3d397b.svg
 assets/c38165c78e58b3bb1aaa96ad2884e50f.svg
