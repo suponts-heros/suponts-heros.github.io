@@ -1,16 +1,29 @@
 <template>
   <v-touch tag="div" class="planning"
-        @swipeleft="goRight"
-        @swiperight="goLeft">
+        @swipeleft="switchPage(days[1])"
+        @swiperight="switchPage(days[0])">
     <selector :values="days"
                      :value="day"
-                     @value="(v) => day = v">
+                     @value="(v) => switchPage(v)">
     </selector>
-    <scroll-body>
-      <div class="body" slot="content">
-        <h2>{{ day }}</h2>
+    <scroll-body class="page left" :show="day === days[0]">
+      <div class="body" slot="content" :id="`page-${days[0]}`">
+        <h2>{{ days[0] }}</h2>
         <table>
-          <tr v-for="event in planning[day]"
+          <tr v-for="event in planning[days[0]]"
+              :id="(specificOpenParsed.heure === event.heure && specificOpenParsed.day === day) ?
+              highlightId : false">
+            <td class="hour">{{ event.heure }}</td>
+            <td class="text">{{ event.texte }}</td>
+          </tr>
+        </table>
+      </div>
+    </scroll-body>
+    <scroll-body class="page right" :show="day === days[1]">
+      <div class="body" slot="content" :id="`page-${days[1]}`">
+        <h2>{{ days[1] }}</h2>
+        <table>
+          <tr v-for="event in planning[days[1]]"
               :id="(specificOpenParsed.heure === event.heure && specificOpenParsed.day === day) ?
               highlightId : false">
             <td class="hour">{{ event.heure }}</td>
@@ -55,17 +68,9 @@
     },
     store: global.store,
     methods: {
-      goLeft () {
-        const index = this.days.indexOf(this.day);
-        if (index > 0) {
-          this.day = this.days[index - 1];
-        }
-      },
-      goRight () {
-        const index = this.days.indexOf(this.day);
-        if (index < this.days.length - 1) {
-          this.day = this.days[index + 1];
-        }
+      switchPage (day) {
+        this.day = day;
+        document.getElementById(`page-${day}`).scrollIntoView();
       }
     },
     components: {
@@ -84,7 +89,22 @@
 </script>
 <style lang="sass" type="text/sass" scoped>
   @import '../../sass/general'
-  .planning .body
+  .planning
+    .page
+      position: fixed
+      width: calc(100% - 30px)
+      height: 100%
+      left: 50%
+      @include using-transition(transform)
+      &.left
+        transform: translateX(-150vw)
+        &[show]
+          transform: translateX(-50%)
+      &.right
+        transform: translateX(150vw)
+        &[show]
+          transform: translateX(-50%)
+    .body
       margin-bottom: 115px
       h2
         text-align: center
@@ -92,6 +112,7 @@
         font-size: $title-text-size
         text-transform: capitalize
       table
+        width: 100%;
         border-collapse: collapse
         tr
           height: 50px
