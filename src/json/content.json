@@ -48,145 +48,167 @@
       {
         "nom": "volley",
         "lieu": "gymnase",
-        "hommes": {
-          "format": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueurs avec 3 remplaçants max, 1 équipe",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
-          }
-        },
-        "femmes": {
-          "format": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueuses avec 3 remplaçantes max, 1 équipe",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
+        "format": {
+          "hommes": {
+            "description": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueurs avec 3 remplaçants max, 1 équipe",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
+          },
+          "femmes": {
+            "description": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueuses avec 3 remplaçantes max, 1 équipe",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
           }
         }
       },
       {
         "nom": "basket",
         "lieu": "gymnase",
-        "hommes": {
-          "format": "Match en 4 quart-temps de 10 minutes sur grand terrain, jeu à 5 joueurs avec 7 remplaçants max, 1 équipe",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
-          }
-        },
-        "femmes": {
-          "format": "Match en 4 quart-temps de 10 minutes sur petit terrain, jeu à 5 joueuses avec 7 remplaçantes max, 1 équipe",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
+        "format": {
+          "hommes": {
+            "description": "Match en 4 quart-temps de 10 minutes sur grand terrain, jeu à 5 joueurs avec 7 remplaçants max, 1 équipe",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
+          },
+          "femmes": {
+            "description": "Match en 4 quart-temps de 10 minutes sur petit terrain, jeu à 5 joueuses avec 7 remplaçantes max, 1 équipe",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
           }
         }
       },
       {
         "nom": "foot",
         "lieu": "stade",
-        "hommes": {
-          "format": "Match en 2 mi-temps de 45 minutes sur grand terrain, 1 équipe de 11 joueurs, 5 remplaçants max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
-          }
-        },
-        "femmes": {
-          "format": "Match en 2 mi-temps de 30 minutes sur petit terrain, 1 équipe de 7 joueuses, 5 remplaçantes max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
+        "format": {
+          "hommes": {
+            "description": "Match en 2 mi-temps de 45 minutes sur grand terrain, 1 équipe de 11 joueurs, 5 remplaçants max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
+          },
+          "femmes": {
+            "description": "Match en 2 mi-temps de 30 minutes sur petit terrain, 1 équipe de 7 joueuses, 5 remplaçantes max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
           }
         }
       },
       {
         "nom": "natation",
         "lieu": "piscine",
-        "format": "En nages individuelles: 50m et 100m en papillon, brasse, et nage libre. En nages mixtes: 4x50m en nage libre et 4x50m en 4 nages. Équipe de 6 à 12 nageurs, limité à 2 nages individuelles par nageur.",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "En nages individuelles: 50m et 100m en papillon, brasse, et nage libre. En nages mixtes: 4x50m en nage libre et 4x50m en 4 nages. Équipe de 6 à 12 nageurs, limité à 2 nages individuelles par nageur.",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       },
       {
         "nom": "tennis",
         "lieu": "terrains de tennis",
-        "format": "Tournoi par équipes avec 2 femmes et 3 hommes, 3 simples M, 2 simples F, et un double mixte, matchs en 2 sets gagnants",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "Tournoi par équipes avec 2 femmes et 3 hommes, 3 simples M, 2 simples F, et un double mixte, matchs en 2 sets gagnants",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       },
       {
         "nom": "waterpolo",
         "lieu": "piscine",
-        "format": "Match mixte de 4 quart-temps de 7 minutes, 7 nageurs avec 5 remplaçants",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "Match mixte de 4 quart-temps de 7 minutes, 7 nageurs avec 5 remplaçants",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       },
       {
         "nom": "handball",
         "lieu": "gymnase",
-        "hommes": {
-          "format": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueurs et 7 remplaçants max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
-          }
-        },
-        "femmes": {
-          "format": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses et 7 remplaçantes max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
+        "format": {
+          "hommes": {
+            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueurs et 7 remplaçants max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
+          },
+          "femmes": {
+            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses et 7 remplaçantes max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
           }
         }
       },
       {
         "nom": "rugby",
         "lieu": "stade",
-        "hommes": {
-          "format": "Match en 2 mi-temps de 35 minutes sur grand terrain, 1 équipe de 15 joueurs avec 5 remplaçants max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
-          }
-        },
-        "femmes": {
-          "format": "Match en 2 mi-temps de 20 minutes sur petit terrain, en nombre d'essais, 1 équipe de 7 joueuses avec 5 remplaçantes max",
-          "score": {
-            "supaero": 0,
-            "ponts": 0
+        "format": {
+          "hommes": {
+            "description": "Match en 2 mi-temps de 35 minutes sur grand terrain, 1 équipe de 15 joueurs avec 5 remplaçants max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
+          },
+          "femmes": {
+            "description": "Match en 2 mi-temps de 20 minutes sur petit terrain, en nombre d'essais, 1 équipe de 7 joueuses avec 5 remplaçantes max",
+            "score": {
+              "supaero": 0,
+              "ponts": 0
+            }
           }
         }
       },
       {
         "nom": "escalade",
         "lieu": "gymnase",
-        "format": "<b>Qualifications</b>: 10 personnes par équipe max. L'organisation choisit les voies de niveau 5b à 5c. Les participants ont 1 heure pour essayer les voies qu'ils veulent. Pour valider, il faut arriver à la dernière prise en un seul essai + avoir clipé toutes les dégaines. Les deux voies grimpées les mieux cotée sont retenues. <br> <b>Finale</b>: les finalistes sont isolés pour ne pas voir les enchaînements de l'autre. Un démonstration est faite puis. Le vainqueur est celui qui est allé le plus loin en se basant sur la dernière prise, touchée, tenue, validée (par ordre croissant)",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "<b>Qualifications</b>: 10 personnes par équipe max. L'organisation choisit les voies de niveau 5b à 5c. Les participants ont 1 heure pour essayer les voies qu'ils veulent. Pour valider, il faut arriver à la dernière prise en un seul essai + avoir clipé toutes les dégaines. Les deux voies grimpées les mieux cotée sont retenues. <br> <b>Finale</b>: les finalistes sont isolés pour ne pas voir les enchaînements de l'autre. Un démonstration est faite puis. Le vainqueur est celui qui est allé le plus loin en se basant sur la dernière prise, touchée, tenue, validée (par ordre croissant)",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       },
       {
         "nom": "petanque",
         "lieu": "terrain de petanque",
-        "format": "Découverte sur place, 15 joueurs max, tireurs ou pointeurs",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "Découverte sur place, 15 joueurs max, tireurs ou pointeurs",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       },
       {
         "nom": "pompoms",
         "lieu": "gymnase",
-        "format": "1 équipe sans limite d'effectifs, le jury est composé de 2 personnes de chaque école, et la durée de la chorégraphie est limitée à 5 minutes",
-        "score": {
-          "supaero": 0,
-          "ponts": 0
+        "format": {
+          "description": "1 équipe sans limite d'effectifs, le jury est composé de 2 personnes de chaque école, et la durée de la chorégraphie est limitée à 5 minutes",
+          "score": {
+            "supaero": 0,
+            "ponts": 0
+          }
         }
       }
     ],

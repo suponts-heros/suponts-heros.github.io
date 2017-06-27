@@ -1,7 +1,7 @@
 <template>
   <v-touch tag="div"
-           @swipeleft="goRight"
-           @swiperight="goLeft"
+           @swipeleft="switchPage(pages[1] || '')"
+           @swiperight="switchPage(pages[0])"
             class="sports">
     <scroll-body class="menu" :show="!itemSelected">
       <div class="body" slot="content">
@@ -17,37 +17,61 @@
     </scroll-body>
     <div class="item" :show="itemSelected">
       <header><v-touch tag="div" class="go-back" @tap="itemSelected = false"></v-touch>
-        {{ (selection !== '') ? `${selectedSport.nom} - ${selection}` : selectedSport.nom }}
+        {{ (page !== '') ? `${selectedSport.nom} - ${page}` : selectedSport.nom }}
       </header>
-      <scroll-body>
+      <scroll-body class="page left"  :show="page === pages[0]">
         <div class="body" slot="content">
-          <p class="format" v-html="determineFormat"></p>
+          <p class="format" v-html="description(page)"></p>
           <div class="where-and-when">
             <v-touch tag="div" class="heure" @tap="showOnPlanning">
-              <p class="date"><i class="icon"></i><span class="text">{{ determineDate }}</span></p>
+              <p class="date"><i class="icon"></i><span class="text">{{ date(page) }}</span></p>
             </v-touch>
             <v-touch tag="div" class="emplacement" @tap="showOnMap">
-              <p class="place"><i class="icon"></i><span class="text">{{ determinePlace }}</span></p>
+              <p class="place"><i class="icon"></i><span class="text">{{ place }}</span></p>
           </v-touch>
           </div>
           <h3>Résultats</h3>
           <div class="results">
             <div class="ponts">
               <div class="icon"></div>
-              <div class="score">{{ determineResults.ponts }}</div>
+              <div class="score">{{ score(page).ponts }}</div>
             </div>
             <div class="supaero">
-              <div class="score">{{ determineResults.supaero }}</div>
+              <div class="score">{{ score(page).supaero }}</div>
               <div class="icon"></div>
             </div>
           </div>
         </div>
       </scroll-body>
-      <selector :values="determineSelector"
+      <scroll-body class="page right" :show="page === pages[1]">
+        <div class="body" slot="content">
+          <p class="format" v-html="description(pages[1] || '')"></p>
+          <div class="where-and-when">
+            <v-touch tag="div" class="heure" @tap="showOnPlanning">
+              <p class="date"><i class="icon"></i><span class="text">{{ date(pages[1] || '') }}</span></p>
+            </v-touch>
+            <v-touch tag="div" class="emplacement" @tap="showOnMap">
+              <p class="place"><i class="icon"></i><span class="text">{{ place }}</span></p>
+          </v-touch>
+          </div>
+          <h3>Résultats</h3>
+          <div class="results">
+            <div class="ponts">
+              <div class="icon"></div>
+              <div class="score">{{ score(pages[1] || '').ponts }}</div>
+            </div>
+            <div class="supaero">
+              <div class="score">{{ score(pages[1] || '').supaero }}</div>
+              <div class="icon"></div>
+            </div>
+          </div>
+        </div>
+      </scroll-body>
+      <selector :values="pages"
                 class="selector"
-                :value="selection"
+                :value="page"
                 v-if="showSelector"
-                @value="(v) => selected = v">
+                @value="switchPage">
       </selector>
     </div>
   </v-touch>
@@ -60,25 +84,60 @@
       return {
         itemSelected: false,
         selectedSport: {},
-        selected: ''
+        page: ''
       };
     },
     computed: {
       planning () {
         return this.$store.getters.getSection('planning') || {};
       },
+      sports () {
+        return this.$store.getters.getSection('sports') || [];
+      },
+      format () {
+        return this.selectedSport['format'] || {};
+      },
       pages () {
-        if (this.selectedSport['hommes'] && this.selectedSport['femmes']) {
-          return [this.selectedSport['hommes'], this.selectedSport['femmes']];
+        if (this.format.hasOwnProperty('description') && this.format.hasOwnProperty('score')) {
+          return [''];
         } else {
-          return [this.selectedSport];
+          return Object.keys(this.format);
         }
       },
-      determineDate () {
+      place () {
+        if (this.selectedSport['lieu']) {
+          return this.selectedSport['lieu'].charAt(0).toUpperCase() + this.selectedSport['lieu'].slice(1);
+        }
+        return '';
+      },
+      showSelector () {
+        return this.pages.length > 1;
+      }
+    },
+    methods: {
+      description (page) {
+        if (this.format.hasOwnProperty('description')) {
+          return this.format['description'];
+        } else if (Object.keys(this.format).length === 0) {
+          return '';
+        } else {
+          return this.format[page]['description'];
+        }
+      },
+      score (page) {
+        if (this.format.hasOwnProperty('score')) {
+          return this.format['score'];
+        } else if (Object.keys(this.format).length === 0) {
+          return {};
+        } else {
+          return this.format[page]['score'];
+        }
+      },
+      date (page) {
         let date = '';
-        let nounToLookFor = this.selectedSport.nom;
-        if (this.selectedSport['femmes'] && this.selectedSport['hommes']) {
-          nounToLookFor += `-${this.selection}`;
+        let nounToLookFor = this.selectedSport['nom'];
+        if (page !== '') {
+          nounToLookFor += `-${page}`;
         }
         for (const day in this.planning) {
           if (this.planning.hasOwnProperty(day)) {
@@ -88,76 +147,31 @@
               }
               return null;
             });
-            if (plan) date = `${day} - ${plan.heure}`;
+            if (plan) date = `${day} - ${plan['heure']}`;
           }
         }
         return date.charAt(0).toUpperCase() + date.slice(1);
       },
-      determinePlace () {
-        if (this.selectedSport.lieu) {
-          return this.selectedSport.lieu.charAt(0).toUpperCase() + this.selectedSport.lieu.slice(1);
-        }
-        return '';
-      },
-      sports () {
-        return this.$store.getters.getSection('sports') || [];
-      },
-      determineSelector () {
-        if (this.selectedSport['femmes'] && this.selectedSport['hommes']) {
-          return ['femmes', 'hommes'];
-        } else {
-          this.selection = '';
-          return [];
-        }
-      },
-      determineFormat () {
-        if (this.selectedSport['hommes'] && this.selectedSport['femmes']) {
-          return this.selectedSport[this.selection]['format'];
-        } else {
-          return this.selectedSport['format'];
-        }
-      },
-      determineResults () {
-        if (this.selectedSport['hommes'] && this.selectedSport['femmes']) {
-          return this.selectedSport[this.selection]['score'] || {};
-        } else {
-          return this.selectedSport['score'] || {};
-        }
-      },
-      selection () {
-        return (this.determineSelector.includes(this.selected)) ? this.selected
-          : (this.determineSelector.length) ? this.determineSelector[0]
-            : '';
-      },
-      showSelector () {
-        return this.pages.length > 1;
-      }
-    },
-    methods: {
       showSport (sport) {
         this.itemSelected = true;
+        if (sport['format'].hasOwnProperty('description')) {
+          this.page = '';
+        } else if (this.page === '') {
+          this.page = Object.keys(sport['format'])[0];
+        }
         this.selectedSport = sport;
       },
-      goLeft () {
-        const index = this.determineSelector.indexOf(this.selection);
-        if (index > 0) {
-          this.selected = this.determineSelector[index - 1];
-        }
-      },
-      goRight () {
-        const index = this.determineSelector.indexOf(this.selection);
-        if (index < this.determineSelector.length - 1) {
-          this.selected = this.determineSelector[index + 1];
-        }
+      switchPage (page) {
+        this.page = page;
       },
       showOnMap () {
         setTimeout(() => {
-          this.$emit('show', this.determinePlace.toLowerCase());
+          this.$emit('show', this.place.toLowerCase());
         }, 100);
       },
       showOnPlanning () {
         setTimeout(() => {
-          this.$emit('plan', this.determineDate.toLowerCase());
+          this.$emit('plan', this.date(this.page).toLowerCase());
         }, 100);
       }
     },
@@ -212,6 +226,20 @@
       background: $background-base
       &[show]
         transform: translate(-50%, 0)
+      .page
+        position: fixed
+        width: calc(100% - 30px)
+        height: 100%
+        left: 50%
+        @include using-transition(transform)
+        &.left
+          transform: translateX(-150vw)
+          &[show]
+            transform: translateX(-50%)
+        &.right
+          transform: translateX(150vw)
+          &[show]
+            transform: translateX(-50%)
       header
         position: relative
         pointer-events: none

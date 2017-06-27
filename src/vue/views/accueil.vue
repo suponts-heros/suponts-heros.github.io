@@ -10,8 +10,8 @@
           <div class="score">{{ results.ponts }}</div>
         </div>
         <div class="supaero">
-          <div class="icon"></div>
           <div class="score">{{ results.supaero }}</div>
+          <div class="icon"></div>
         </div>
       </div>
     </div>
@@ -46,19 +46,32 @@
     .results
       width: 100%
       text-align: center
+      position: relative
+      &:after
+        content: '-'
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
       > div
+        margin: 0 5px
         display: inline-block
-        margin: 0 15px
-        .icon
-          width: 100px
-          height: 100px
-        .score
-          font-size: 30px
+        > div
+          margin: 0 5px
+          &.icon
+            width: 70px
+            height: 70px
+            display: inline-block
+            vertical-align: middle
+          &.score
+            font-size: 30px
+            display: inline-block
+            vertical-align: middle
         &.ponts .icon
-            background: url(../../img/ponts.svg) center no-repeat
-            background-size: 80%
+          background: url(../../img/ponts.svg) center no-repeat
+          background-size: 100%
         &.supaero .icon
-            background: url(../../img/supaero.svg) center no-repeat
-            background-size: 80%
+          background: url(../../img/supaero.svg) center no-repeat
+          background-size: 100%
 
 </style>
