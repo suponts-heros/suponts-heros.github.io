@@ -15,38 +15,41 @@
         </v-touch>
       </div>
     </scroll-body>
-    <scroll-body class="item" :show="itemSelected">
-      <div class="body" slot="content">
-        <v-touch tag="div" class="go-back" @tap="itemSelected = false"></v-touch>
-        <h2>{{ (selection !== '') ? `${selectedSport.nom} - ${selection}` : selectedSport.nom }}</h2>
-        <p class="format" v-html="determineFormat"></p>
-        <div class="where-and-when">
-          <v-touch tag="div" class="heure" @tap="plan">
-            <p class="date"><i class="icon"></i><span class="text">{{ determineDate }}</span></p>
+    <div class="item" :show="itemSelected">
+      <scroll-body>
+        <div class="body" slot="content">
+          <header><v-touch tag="div" class="go-back" @tap="itemSelected = false"></v-touch>
+            {{ (selection !== '') ? `${selectedSport.nom} - ${selection}` : selectedSport.nom }}
+          </header>
+          <p class="format" v-html="determineFormat"></p>
+          <div class="where-and-when">
+            <v-touch tag="div" class="heure" @tap="plan">
+              <p class="date"><i class="icon"></i><span class="text">{{ determineDate }}</span></p>
+            </v-touch>
+            <v-touch tag="div" class="emplacement" @tap="show">
+              <p class="place"><i class="icon"></i><span class="text">{{ determinePlace }}</span></p>
           </v-touch>
-          <v-touch tag="div" class="emplacement" @tap="show">
-            <p class="place"><i class="icon"></i><span class="text">{{ determinePlace }}</span></p>
-        </v-touch>
-        </div>
-        <h3>Résultats</h3>
-        <div class="results">
-          <div class="ponts">
-            <div class="icon"></div>
-            <div class="score">{{ determineResults.ponts }}</div>
           </div>
-          <div class="supaero">
-            <div class="icon"></div>
-            <div class="score">{{ determineResults.supaero }}</div>
+          <h3>Résultats</h3>
+          <div class="results">
+            <div class="ponts">
+              <div class="icon"></div>
+              <div class="score">{{ determineResults.ponts }}</div>
+            </div>
+            <div class="supaero">
+              <div class="score">{{ determineResults.supaero }}</div>
+              <div class="icon"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </scroll-body>
-    <selector :values="determineSelector"
-              class="selector"
-              :show="itemSelected"
-              :value="selection"
-              @value="(v) => selected = v">
-    </selector>
+      </scroll-body>
+      <selector :values="determineSelector"
+                class="selector"
+                :show="itemSelected"
+                :value="selection"
+                @value="(v) => selected = v">
+      </selector>
+    </div>
   </v-touch>
 </template>
 <script>
@@ -167,16 +170,7 @@
     overflow: hidden
     display: block
     width: 100%
-    .menu
-      position: fixed
-      width: calc(100% - 30px)
-      height: 100%
-      left: 50%
-      transform: translateX(-150vw)
-      @include using-transition(transform)
-      &[show]
-        transform: translateX(-50%)
-      .body
+    .menu .body
         text-align: center
         .sport
           margin: 20px 15px
@@ -200,70 +194,97 @@
     .item
       position: fixed
       height: 100%
-      width: calc(100% - 30px)
-      transform: translateX(150vw)
+      width: 100%
       left: 50%
-      @include using-transition(transform)
+      top: 0
+      transform: translate(-50%, 100%)
+      opacity: 0
+      @include using-transition(all)
+      background: $background-base
       &[show]
-        transform: translateX(-50%)
-      .go-back
-        position: absolute
-        top: -5px
-        left: 0
-        width: 70px
-        height: 70px
-        background: url('../../img/back-arrow.svg') center no-repeat
-        background-size: 50%
-      .where-and-when
-        .heure, .emplacement
-          display: block
-          vertical-align: top
-          white-space: nowrap
-          .place, .date
-            .text
-              font-size: 20px
-              display: inline-block
-            .icon
-              width: 40px
-              height: 40px
-              display: inline-block
-              vertical-align: middle
-              margin-right: 10px
-          .place .icon
-            background: url('../../img/show-location.svg') center no-repeat
-            background-size: 100%
-          .date .icon
-            background: url('../../img/show-planning.svg') center no-repeat
-            background-size: 100%
-      .format
-        font-size: 17px
-      h3
-        text-align: center
-      h2
-        text-align: center
-        color: $text-title
-        font-size: $title-text-size
-        text-transform: capitalize
-      .results
-        margin-bottom: 100px
-        width: 100%
-        text-align: center
-        > div
-          display: inline-block
-          .icon
-            width: 100px
-            height: 100px
-          .score
-            font-size: 30px
-          &.ponts .icon
-            background: url(../../img/ponts.svg) center no-repeat
-            background-size: 80%
-          &.supaero .icon
-            background: url(../../img/supaero.svg) center no-repeat
-            background-size: 80%
-    .selector
-      transform: translateX(100vw)
-      @include using-transition(transform)
-      &[show]
-        transform: translateX(0)
+        opacity: 1
+        transform: translate(-50%, 0)
+      .scroll-body
+        border-radius: 15px
+        .body
+          margin-top: 75px;
+          .where-and-when
+            .heure, .emplacement
+              display: block
+              vertical-align: top
+              white-space: nowrap
+              .place, .date
+                .text
+                  font-size: 20px
+                  display: inline-block
+                .icon
+                  width: 40px
+                  height: 40px
+                  display: inline-block
+                  vertical-align: middle
+                  margin-right: 10px
+              .place .icon
+                background: url('../../img/show-location.svg') center no-repeat
+                background-size: 100%
+              .date .icon
+                background: url('../../img/show-planning.svg') center no-repeat
+                background-size: 100%
+        .format
+          font-size: 17px
+        h3
+          text-align: center
+        header
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          pointer-events: none
+          padding: 15px 0
+          text-align: center
+          color: $text-title
+          font-size: $title-text-size
+          text-transform: capitalize
+          background-color: #fff
+          border-radius: 15px
+          .go-back
+            position: absolute
+            pointer-events: auto
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            width: 70px
+            height: 70px
+            background: url('../../img/close.svg') center no-repeat
+            background-size: 50%
+        .results
+          position: relative
+          margin-bottom: 120px
+          width: 100%
+          text-align: center
+          &:after
+            content: '-'
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%, -50%)
+          > div
+            margin: 0 5px
+            display: inline-block
+            > div
+              margin: 0 5px
+              &.icon
+                width: 70px
+                height: 70px
+                display: inline-block
+                vertical-align: middle
+              &.score
+                font-size: 30px
+                display: inline-block
+                vertical-align: middle
+            &.ponts .icon
+              background: url(../../img/ponts.svg) center no-repeat
+              background-size: 100%
+            &.supaero .icon
+              background: url(../../img/supaero.svg) center no-repeat
+              background-size: 100%
 </style>
