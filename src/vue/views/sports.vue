@@ -16,17 +16,17 @@
       </div>
     </scroll-body>
     <div class="item" :show="itemSelected">
+      <header><v-touch tag="div" class="go-back" @tap="itemSelected = false"></v-touch>
+        {{ (selection !== '') ? `${selectedSport.nom} - ${selection}` : selectedSport.nom }}
+      </header>
       <scroll-body>
         <div class="body" slot="content">
-          <header><v-touch tag="div" class="go-back" @tap="itemSelected = false"></v-touch>
-            {{ (selection !== '') ? `${selectedSport.nom} - ${selection}` : selectedSport.nom }}
-          </header>
           <p class="format" v-html="determineFormat"></p>
           <div class="where-and-when">
-            <v-touch tag="div" class="heure" @tap="plan">
+            <v-touch tag="div" class="heure" @tap="showOnPlanning">
               <p class="date"><i class="icon"></i><span class="text">{{ determineDate }}</span></p>
             </v-touch>
-            <v-touch tag="div" class="emplacement" @tap="show">
+            <v-touch tag="div" class="emplacement" @tap="showOnMap">
               <p class="place"><i class="icon"></i><span class="text">{{ determinePlace }}</span></p>
           </v-touch>
           </div>
@@ -45,8 +45,8 @@
       </scroll-body>
       <selector :values="determineSelector"
                 class="selector"
-                :show="itemSelected"
                 :value="selection"
+                v-if="showSelector"
                 @value="(v) => selected = v">
       </selector>
     </div>
@@ -66,6 +66,13 @@
     computed: {
       planning () {
         return this.$store.getters.getSection('planning') || {};
+      },
+      pages () {
+        if (this.selectedSport['hommes'] && this.selectedSport['femmes']) {
+          return [this.selectedSport['hommes'], this.selectedSport['femmes']];
+        } else {
+          return [this.selectedSport];
+        }
       },
       determineDate () {
         let date = '';
@@ -121,6 +128,9 @@
         return (this.determineSelector.includes(this.selected)) ? this.selected
           : (this.determineSelector.length) ? this.determineSelector[0]
             : '';
+      },
+      showSelector () {
+        return this.pages.length > 1;
       }
     },
     methods: {
@@ -140,12 +150,12 @@
           this.selected = this.determineSelector[index + 1];
         }
       },
-      show () {
+      showOnMap () {
         setTimeout(() => {
           this.$emit('show', this.determinePlace.toLowerCase());
         }, 100);
       },
-      plan () {
+      showOnPlanning () {
         setTimeout(() => {
           this.$emit('plan', this.determineDate.toLowerCase());
         }, 100);
@@ -198,16 +208,31 @@
       left: 50%
       top: 0
       transform: translate(-50%, 100%)
-      opacity: 0
-      @include using-transition(all)
+      @include using-transition(transform)
       background: $background-base
       &[show]
-        opacity: 1
         transform: translate(-50%, 0)
-      .scroll-body
+      header
+        position: relative
+        pointer-events: none
+        padding: 15px 0
+        text-align: center
+        color: $text-title
+        font-size: $title-text-size
+        text-transform: capitalize
         border-radius: 15px
+        .go-back
+          position: absolute
+          pointer-events: auto
+          left: 0
+          top: 50%
+          transform: translateY(-50%)
+          width: 70px
+          height: 70px
+          background: url('../../img/close.svg') center no-repeat
+          background-size: 50%
+      .scroll-body
         .body
-          margin-top: 75px;
           .where-and-when
             .heure, .emplacement
               display: block
@@ -233,32 +258,9 @@
           font-size: 17px
         h3
           text-align: center
-        header
-          position: absolute
-          top: 0
-          left: 0
-          width: 100%
-          pointer-events: none
-          padding: 15px 0
-          text-align: center
-          color: $text-title
-          font-size: $title-text-size
-          text-transform: capitalize
-          background-color: #fff
-          border-radius: 15px
-          .go-back
-            position: absolute
-            pointer-events: auto
-            left: 0
-            top: 50%
-            transform: translateY(-50%)
-            width: 70px
-            height: 70px
-            background: url('../../img/close.svg') center no-repeat
-            background-size: 50%
         .results
           position: relative
-          margin-bottom: 120px
+          margin-bottom: 170px
           width: 100%
           text-align: center
           &:after
