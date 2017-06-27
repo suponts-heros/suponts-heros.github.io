@@ -111,7 +111,7 @@
       {
         "nom": "tennis",
         "lieu": "terrains de tennis",
-        "format": "Tournoi par équipes avec 2 femmes et 3 hommes, 3 simples M, 2 simples F, et un double mixte, matchs en 2 sets gagnants",
+        "format": "Tournoi par équipes avec 3 simples M, 2 simples F, et un double mixte, matchs en 2 sets gagnants",
         "score": {
           "supaero": 0,
           "ponts": 0
