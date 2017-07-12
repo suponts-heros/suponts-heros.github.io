@@ -83,7 +83,6 @@ module.exports = {
       { from: 'src/json/content.json' }
     ]),
     new AppCachePlugin({
-      exclude: [/.*\.json$/],
       output: 'cache.manifest'
     }),
     new Webpack.DefinePlugin({

@@ -126,6 +126,9 @@
     height: 100%
     display: block
     width: 100%
+    pointer-events: none
+    *
+      pointer-events: auto
   .intro-popup
     color: $text-default
     font-family: DefaultFont, sans-serif

@@ -54,6 +54,7 @@
     width: 100%
     height: 100%
     pointer-events: none
+    overflow: hidden
     &[opened]
       .black-veil
         opacity: 1
@@ -68,6 +69,7 @@
     .black-veil
       position: fixed
       pointer-events: none
+      overflow: hidden
       width: 100%
       height: 100%
       opacity: 0
@@ -91,6 +93,8 @@
         height: 80px
         width: 100%
         transform: translateY(-50%)
+        pointer-events: none
+        touch-action: auto !important
         &:before
           content: ''
           position: absolute
