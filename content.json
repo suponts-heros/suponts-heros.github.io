@@ -193,7 +193,7 @@
         "nom": "petanque",
         "lieu": "terrain de petanque",
         "format": {
-          "description": "Découverte sur place, 15 joueurs max, tireurs ou pointeurs",
+          "description": "Découverte sur place, 15 joueurs max, tireurs et/ou pointeurs",
           "score": {
             "supaero": 0,
             "ponts": 0
