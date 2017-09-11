@@ -190,10 +190,10 @@
         }
       },
       {
-        "nom": "petanque",
-        "lieu": "terrain de petanque",
+        "nom": "badminton",
+        "lieu": "gymnase",
         "format": {
-          "description": "Découverte sur place, 15 joueurs max, tireurs ou pointeurs",
+          "description": "Cyriac, à toi de jouer. ;-)",
           "score": {
             "supaero": 0,
             "ponts": 0

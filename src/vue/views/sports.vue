@@ -183,7 +183,7 @@
   };
 </script>
 <style lang="sass" type="text/sass" rel="stylesheet/sass" scoped>
-  $existing-icons: volley basket foot tennis natation waterpolo handball petanque rugby escalade pompoms aviron
+  $existing-icons: volley basket foot tennis natation waterpolo handball petanque rugby escalade pompoms aviron badminton
   @import '../../sass/general'
   .sports
     position: fixed
