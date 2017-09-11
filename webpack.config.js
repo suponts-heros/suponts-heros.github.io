@@ -67,7 +67,7 @@ module.exports = {
   },
   plugins: [
     new FaviconsWebpackPlugin({
-      logo: './src/img/suponts-heros-logo.png',
+      logo: './src/img/logo-suponts-nouveau.png',
       prefix: 'assets/',
       emitStats: false,
       statsFilename: 'assets/[hash].json',
