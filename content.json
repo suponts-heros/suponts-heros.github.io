@@ -261,9 +261,10 @@
         "titre": "Les sponsors",
         "logos": [
           "https://upload.wikimedia.org/wikipedia/commons/9/9d/Soci%C3%A9t%C3%A9_G%C3%A9n%C3%A9rale.svg",
-          "https://upload.wikimedia.org/wikipedia/commons/3/3d/ISAE_SUPAERO_72_cmjn.png"
+          "https://upload.wikimedia.org/wikipedia/commons/3/3d/ISAE_SUPAERO_72_cmjn.png",
+          "https://conseilsport.decathlon.fr/sites/decathlon/themes/decathlon/images/logo.svg"
         ],
-        "texte": "Nous tenions à  remercier nos deux gros sponsors pour cet événement à  savoir la Société Générale et l'ISAE-Supaero pour nous avoir apporté leur soutient."
+        "texte": "Nous tenions à  remercier nos trois gros sponsors pour cet événement à savoir la Société Générale, Decathlon et l'ISAE-Supaero pour nous avoir apporté leur soutient."
       }],
       "l'AS": {
         "titre": "L'association sportive",
