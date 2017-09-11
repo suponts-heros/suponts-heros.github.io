@@ -73,7 +73,7 @@
         if (this.userMarker) this.map.removeLayer(this.userMarker);
         const radius = e.accuracy / 2;
         const locationIcon = L.divIcon({
-          html: '<div class="circle"></div><div class="point"></div>',
+          html: '<div class="point"></div>',
           className: 'user-location',
           iconSize: [radius, radius],
           iconAnchor: [radius / 2, radius / 2]
@@ -175,24 +175,6 @@
   justify-content: center
   align-items: center
   z-index: 9999 !important
-  .circle
-    position: absolute
-    border-radius: 50%
-    border: 2px solid $user-location-color
-    @keyframes dissolve
-      from
-        opacity: 1
-        width: 0
-        height: 0
-        min-width: 0
-        min-height: 0
-      to
-        opacity: 0
-        width: 150%
-        min-width: 20px
-        min-height: 20px
-        height: 150%
-    animation: 3s dissolve ease infinite
   .point
     width: 15px
     height: 15px
@@ -202,4 +184,13 @@
     transform: translate(-50%, -50%)
     background: radial-gradient($user-location-color 50%, rgba(128, 128, 128, 0))
     border-radius: 50%
+    opacity: 1
+    @keyframes dissolve
+      25%
+        opacity: 1
+      50%
+        opacity: 0.4
+      75%
+        opacity: 1
+    animation: 2s dissolve ease infinite
 </style>
