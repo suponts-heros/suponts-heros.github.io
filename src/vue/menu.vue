@@ -137,12 +137,12 @@
         display: inline-block
         position: relative
         color: $text-on-theme
-        font-size: 15px
+        font-size: 17px
         min-width: 90px
         min-height: 90px
         .icon
-          width: 70px
-          height: 70px
+          width: 50px
+          height: 50px
           display: inline-block
           &.accueil
             background: url(../img/home.svg) center no-repeat

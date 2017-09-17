@@ -11,6 +11,12 @@
         <h2>{{ as.titre }}</h2>
         <p>{{ as.texte }}</p>
         <img class="logo" :src="require('../../img/logo-as-2017.png')">
+        <h2>Les développeurs</h2>
+        <p class="dev">
+          Application web développée par Nikola Lohinski (promo 2017). N'hésitez pas
+          à nous envoyer un petit feedback :
+          <a href="mailto:suponts.heros@gmail.com">suponts.heros@gmail.com</a>
+        </p>
     </div>
   </scroll-body>
 </template>
@@ -57,4 +63,8 @@
     width: 80vw
     max-width: 250px
     margin: 30px auto
+  .dev > a
+    text-decoration: none
+    color: $text-title
+    font-style: italic
 </style>
