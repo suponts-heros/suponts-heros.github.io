@@ -1,8 +1,8 @@
 {
-  "popup d'accueil": "Bienvenue dans l'app Suponts'Héros, l'event sportif étudiant regroupant l'ISAE Supaéro et l'Ecole des Ponts-ParisTech. Vous y trouverez les news importantes, le score du tournoi ainsi que les résultats par sport dans la section consacrée. Vous y trouverez également une carte interactive, les contacts en cas d'urgence et un tas d'autres chose alors restez connectés et à  toute sur le campus !",
+  "popup d'accueil": "Bienvenue dans l'app Suponts'Héros, l'event sportif étudiant regroupant l'ISAE Supaéro et l'Ecole des Ponts-ParisTech. Vous y trouverez les news importantes, le score du tournoi ainsi que les résultats par sport, une carte intéractive et les contacts en cas d'urgence alors restez connectés et à  toute sur le campus !",
   "sections": {
     "accueil": {
-      "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez vous les 7 et 8 Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
+      "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez-vous les 30 Septembre et 1er Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
       "resultats": {
         "supaero": 0,
         "ponts": 0
@@ -10,38 +10,37 @@
     },
     "informations": {
       "contacts d'urgence": [
-        { "nom": "Responsable Suponts'Héros", "telephone": "0000000000" },
-        { "nom": "Président de l'AS", "telephone": "0000000000" },
-        { "nom": "Responsable évènements", "telephone": "0000000000" }
+        { "nom": "Responsable Suponts'Héros", "telephone": "0781657798" },
+        { "nom": "Président de l'AS", "telephone": "0632373965" },
+        { "nom": "Poste de garde", "telephone": "0561338295" }
       ],
       "autres informations": [
-        { "titre": "A l'arrivée samedi matin", "contenu": "A l'arrivée de l'École des Ponts, les packs seront distribués vers le RU avant le petit-déjeuner aux sportifs des Ponts et aux sportifs de Supaéro."},
-        { "titre": "Dépôt des affaires", "contenu": "Les affaires des participants seront stockées dans une salle fermée au gymnase la journée mais accessible par demande à  la table de marque."}
+        { "titre": "A l'arrivée samedi matin", "contenu": "A l'arrivée de l'École des Ponts, les packs seront distribués vers le RU avant le petit-déjeuner aux sportifs des Ponts et aux sportifs de Supaéro."}
       ]
     },
     "planning": {
       "samedi": [
-        { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner au RU" },
-        { "heure": "10:00", "sports": ["volley-hommes", "escalade", "tennis", "petanque"], "texte": "Volley M et Escalade au gymnase, début du tennis et de la pétanque" },
+        { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner à la MDE" },
+        { "heure": "10:00", "sports": ["volley-hommes", "escalade", "tennis"], "texte": "Volley M et Escalade au gymnase, début du tennis" },
         { "heure": "11:00", "sports": ["volley-femmes", "badminton"], "texte": "Volley F et Badminton au gymnase" },
         { "heure": "12:00", "sports": ["basket-hommes"], "texte": "Basket M au gymnase" },
-        { "heure": "13:00", "texte": "Déjeuner près du gymnase" },
+        { "heure": "13:00", "texte": "Déjeuner au resto U" },
         { "heure": "14:00", "sports": ["basket-femmes", "escalade", "natation"], "texte": "Basket F et Escalade au gymnase, et Natation à la piscine" },
-        { "heure": "15:00", "sports": ["handball-femmes", "waterpolo"], "texte": "Hand F au gymnase, et Waterpolo à la piscinee" },
+        { "heure": "15:00", "sports": ["handball-femmes", "waterpolo"], "texte": "Hand F au gymnase, et Waterpolo à la piscine" },
         { "heure": "16:00", "sports": ["handball-hommes", "rugby-femmes"], "texte": "Hand M au gymnase et Rugby F sur le stade, et nage libre à la piscine" },
-        { "heure": "17:00", "sports": ["rugby-hommes"], "texte": "Rugby M sur le stade et goûter près du gymnase" },
+        { "heure": "17:00", "sports": ["rugby-hommes"], "texte": "Rugby M sur le stade" },
         { "heure": "18:30", "sports": ["pompoms"], "texte": "Show PomPoms au gymnase" },
         { "heure": "19:00", "texte": "Temps de repos (douches, etc...)" },
-        { "heure": "20:00", "texte": "Dîner au RU" },
-        { "heure": "22:00", "texte": "Début de la soirée Pilote ou BTP à la MDE" }
+        { "heure": "20:00", "texte": "Dîner au resto U" },
+        { "heure": "22:00", "texte": "Début de la soirée à la MDE" }
       ],
       "dimanche": [
          { "heure": "8:30", "texte": "Réveil puis petit-déjeuner" },
          { "heure": "10:00", "sports": ["foot-femmes"], "texte": "Foot F sur le stade" },
          { "heure": "11:00", "sports": ["foot-hommes"], "texte": "Foot M sur le stade" },
-         { "heure": "12:30", "texte": "BBQ près du gymnase" },
+         { "heure": "12:30", "texte": "BBQ près vers le stade" },
          { "heure": "14:00", "texte": "Remise de prix" },
-         { "heure": "15:00", "texte": "Fin du tournoi" }
+         { "heure": "15:00", "texte": "Fin du tournoi et départ des participants" }
       ]
     },
     "sports": [
@@ -193,7 +192,7 @@
         "nom": "badminton",
         "lieu": "gymnase",
         "format": {
-          "description":"À voir sur place.",
+          "description": "Match par équipe, 2 simples et 1 double en 2 sets gagnants",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -221,7 +220,7 @@
           "position": [43.567035, 1.472583]
         },
         {
-          "nom": "foyer",
+          "nom": "MDE",
           "position": [43.569769, 1.472101]
         },
         {
@@ -239,10 +238,6 @@
         {
           "nom": "stade",
           "position": [43.565044, 1.477066]
-        },
-        {
-          "nom": "terrain de petanque",
-          "position": [43.570014, 1.471025]
         },
         {
           "nom": "poste de secours",
