@@ -38,7 +38,7 @@
          { "heure": "8:30", "texte": "Réveil puis petit-déjeuner" },
          { "heure": "10:00", "sports": ["foot-femmes"], "texte": "Foot F sur le stade" },
          { "heure": "11:00", "sports": ["foot-hommes"], "texte": "Foot M sur le stade" },
-         { "heure": "12:30", "texte": "BBQ près vers le stade" },
+         { "heure": "12:30", "texte": "BBQ près du stade" },
          { "heure": "14:00", "texte": "Remise de prix" },
          { "heure": "15:00", "texte": "Fin du tournoi et départ des participants" }
       ]
