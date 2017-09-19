@@ -21,14 +21,14 @@
     "planning": {
       "samedi": [
         { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner à la MDE" },
-        { "heure": "10:00", "sports": ["volley-hommes", "escalade", "tennis"], "texte": "Volley M et Escalade au gymnase, début du tennis" },
-        { "heure": "11:00", "sports": ["volley-femmes", "badminton"], "texte": "Volley F et Badminton au gymnase" },
-        { "heure": "12:00", "sports": ["basket-hommes"], "texte": "Basket M au gymnase" },
+        { "heure": "10:00", "sports": ["volley-hommes", "escalade", "tennis"], "texte": "Volley M et Escalade (qualifications) au gymnase, début du tennis" },
+        { "heure": "11:00", "sports": ["basket-hommes"], "texte": "Basket M au gymnase" },
+        { "heure": "11:30", "sports": ["rugby-hommes"], "texte": "Rugby M sur le stade" },
         { "heure": "13:00", "texte": "Déjeuner au resto U" },
-        { "heure": "14:00", "sports": ["basket-femmes", "escalade", "natation"], "texte": "Basket F et Escalade au gymnase, et Natation à la piscine" },
+        { "heure": "14:00", "sports": ["basket-femmes", "escalade", "natation"], "texte": "Basket F et Escalade (finale) au gymnase, et Natation à la piscine" },
         { "heure": "15:00", "sports": ["handball-femmes", "waterpolo"], "texte": "Hand F au gymnase, et Waterpolo à la piscine" },
-        { "heure": "16:00", "sports": ["handball-hommes", "rugby-femmes"], "texte": "Hand M au gymnase et Rugby F sur le stade, et nage libre à la piscine" },
-        { "heure": "17:00", "sports": ["rugby-hommes"], "texte": "Rugby M sur le stade" },
+        { "heure": "16:00", "sports": ["handball-hommes", "rugby-femmes"], "texte": "Hand M au gymnase et Rugby F sur le stade" },
+        { "heure": "17:00", "sports": ["volley-femmes", "badminton"], "texte": "Volley F et Badminton au gymnase" },
         { "heure": "18:30", "sports": ["pompoms"], "texte": "Show PomPoms au gymnase" },
         { "heure": "19:00", "texte": "Temps de repos (douches, etc...)" },
         { "heure": "20:00", "texte": "Dîner au resto U" },
@@ -49,14 +49,14 @@
         "lieu": "gymnase",
         "format": {
           "hommes": {
-            "description": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueurs avec 3 remplaçants max, 1 équipe",
+            "description": "Match en deux sets de 25 points puis 1 set décisif en 15 points si nécessaire 6 joueurs sur le terrain, jusqu’à 9 joueurs par équipe (possibilité d’aligner deux équipes)",
             "score": {
               "supaero": 0,
               "ponts": 0
             }
           },
           "femmes": {
-            "description": "Match en 2 sets de 25 points et un set décisif en 15 points, jeu à 6 joueuses avec 3 remplaçantes max, 1 équipe",
+            "description": "Match en deux sets de 25 points puis un set décisif en 15 points si nécessaire 6 joueuses sur le terrain, jusqu’à 9 joueuses par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
@@ -69,14 +69,14 @@
         "lieu": "gymnase",
         "format": {
           "hommes": {
-            "description": "Match en 4 quart-temps de 10 minutes sur grand terrain, jeu à 5 joueurs avec 7 remplaçants max, 1 équipe",
+            "description": "Match de 4x10min dans le gymnase sur le grand terrain. 5 joueurs sur le terrain, jusqu’à 12 joueurs par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
             }
           },
           "femmes": {
-            "description": "Match en 4 quart-temps de 10 minutes sur petit terrain, jeu à 5 joueuses avec 7 remplaçantes max, 1 équipe",
+            "description": "Match de 4x10min dans le gymnase sur le petit terrain. 5 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
@@ -89,14 +89,14 @@
         "lieu": "stade",
         "format": {
           "hommes": {
-            "description": "Match en 2 mi-temps de 45 minutes sur grand terrain, 1 équipe de 11 joueurs, 5 remplaçants max",
+            "description": "Match de 2x45min sur grand terrain 11 joueurs sur le terrain, jusqu’à 16 joueurs par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
             }
           },
           "femmes": {
-            "description": "Match en 2 mi-temps de 30 minutes sur petit terrain, 1 équipe de 7 joueuses, 5 remplaçantes max",
+            "description": "Match de 2x25min sur petit terrain, 7 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
@@ -108,7 +108,7 @@
         "nom": "natation",
         "lieu": "piscine",
         "format": {
-          "description": "En nages individuelles: 50m et 100m en papillon, brasse, et nage libre. En nages mixtes: 4x50m en nage libre et 4x50m en 4 nages. Équipe de 6 à 12 nageurs, limité à 2 nages individuelles par nageur.",
+          "description": "De 6 à 12 nageurs. Chaque nageur ne peut participer qu'à deux nages individuelles, et aux relais. <br> <b>Nages individuelles</b>: 50m et 100m en papillon, dos, brasse et nage libre <br> <b>Relais mixtes</b>: 4x50m nage libre et 4x50m 4 nages",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -119,7 +119,7 @@
         "nom": "tennis",
         "lieu": "terrains de tennis",
         "format": {
-          "description": "Tournoi par équipes avec 2 femmes et 3 hommes, 3 simples M, 2 simples F, et un double mixte, matchs en 2 sets gagnants",
+          "description": "Tournoi par équipes de 3 garçons et 2 filles, 3 simples M, 2 simples F, 1 double mixte. Matchs en 2 sets gagnants. Les simples valent 1 point, le double en vaut 2",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -130,7 +130,7 @@
         "nom": "waterpolo",
         "lieu": "piscine",
         "format": {
-          "description": "Match mixte de 4 quart-temps de 7 minutes, 7 nageurs avec 5 remplaçants",
+          "description": "Match de 4x10min dans le bassin. 7 nageurs dans l’eau, jusqu’à 14 nageurs par équipe, 9 nageurs minimum pour constituer l’équipe.",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -142,14 +142,14 @@
         "lieu": "gymnase",
         "format": {
           "hommes": {
-            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueurs et 7 remplaçants max",
+            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueurs sur le terrain,  jusqu’à 14 joueurs par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
             }
           },
           "femmes": {
-            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses et 7 remplaçantes max",
+            "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses sur le terrain,  jusqu’à 14 joueuses par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
@@ -162,14 +162,14 @@
         "lieu": "stade",
         "format": {
           "hommes": {
-            "description": "Match en 2 mi-temps de 35 minutes sur grand terrain, 1 équipe de 15 joueurs avec 5 remplaçants max",
+            "description": "Match de 2x35min sur grand terrain, 15 joueurs sur le terrain, jusqu’à 20 joueurs par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
             }
           },
           "femmes": {
-            "description": "Match en 2 mi-temps de 20 minutes sur petit terrain, en nombre d'essais, 1 équipe de 7 joueuses avec 5 remplaçantes max",
+            "description": "Match de 2x20min sur petit terrain, 7 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
               "supaero": 0,
               "ponts": 0
@@ -181,7 +181,7 @@
         "nom": "escalade",
         "lieu": "gymnase",
         "format": {
-          "description": "<b>Qualifications</b>: 10 personnes par équipe max. L'organisation choisit les voies de niveau 5b à 5c. Les participants ont 1 heure pour essayer les voies qu'ils veulent. Pour valider, il faut arriver à la dernière prise en un seul essai + avoir clipé toutes les dégaines. Les deux voies grimpées les mieux cotée sont retenues. <br> <b>Finale</b>: les finalistes sont isolés pour ne pas voir les enchaînements de l'autre. Un démonstration est faite puis. Le vainqueur est celui qui est allé le plus loin en se basant sur la dernière prise, touchée, tenue, validée (par ordre croissant)",
+          "description": "<b>Qualifications</b>: 7 personnes par école max. L'organisation choisit les voies de niveau 5b à 6c. Les participants ont 1 heure pour essayer les voies qu'ils veulent. Pour valider, il faut arriver à la dernière prise en deux essais + avoir clipé toutes les dégaines. Les deux voies grimpées les mieux cotée sont retenues et les 5 participants ayant grimpé les voies les plus difficiles sont retenus. <br> <b>Finale</b>: Une voie est choisie. Les finalistes sont isolés pour ne pas voir les enchaînements de l'autre. L'ordre de passage est du dernier qualifié au premier. Le vainqueur est celui qui est allé le plus loin en se basant sur la dernière prise, touchée, tenue, validée (par ordre croissant)",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -192,7 +192,7 @@
         "nom": "badminton",
         "lieu": "gymnase",
         "format": {
-          "description": "Match par équipe, 2 simples et 1 double en 2 sets gagnants",
+          "description": "Tournoi par équipes de 5 garçons et 2 filles, 3 simples M, 2 simples F, 2 doubles M, 1 double F, 1 double mixte. Matchs en 2 sets gagnants, sets de 15 point",
           "score": {
             "supaero": 0,
             "ponts": 0
@@ -203,7 +203,7 @@
         "nom": "pompoms",
         "lieu": "gymnase",
         "format": {
-          "description": "1 équipe sans limite d'effectifs, le jury est composé de 2 personnes de chaque école, et la durée de la chorégraphie est limitée à 5 minutes",
+          "description": "Au moins 3 musiques différentes, et pas plus de 5 min de show.",
           "score": {
             "supaero": 0,
             "ponts": 0
