@@ -10,7 +10,7 @@
     <popup :open="introPopup">
       <div slot="body"
            class="intro-popup">
-        <p>{{ textIntroPopup }}</p>
+        <p v-html="textIntroPopup"></p>
         <v-touch tag="div" class="hide-popup"
                 @tap="session.hidePopup = !session.hidePopup">
           <div class="checkbox"
