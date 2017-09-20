@@ -130,7 +130,6 @@
             @include using-transition(opacity)
             background: url(../img/menu.svg) no-repeat center
             background-size: 50%
-
       > .item
         margin: 15px
         text-align: center
