@@ -20,7 +20,7 @@
     },
     "planning": {
       "samedi": [
-        { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner à la MDE" },
+        { "heure": "8:00", "texte": "Arrivée des Ponts, distribution des packs et petit déjeuner au gymnase" },
         { "heure": "10:00", "sports": ["volley-hommes", "escalade", "tennis"], "texte": "Volley M et Escalade (qualifications) au gymnase, début du tennis" },
         { "heure": "11:00", "sports": ["basket-hommes"], "texte": "Basket M au gymnase" },
         { "heure": "11:30", "sports": ["rugby-hommes"], "texte": "Rugby M sur le stade" },
@@ -31,7 +31,7 @@
         { "heure": "17:00", "sports": ["volley-femmes", "badminton"], "texte": "Volley F et Badminton au gymnase" },
         { "heure": "18:30", "sports": ["pompoms"], "texte": "Show PomPoms au gymnase" },
         { "heure": "19:00", "texte": "Temps de repos (douches, etc...)" },
-        { "heure": "20:00", "texte": "Dîner au resto U" },
+        { "heure": "20:00", "texte": "Dîner au gymnase/pré" },
         { "heure": "22:00", "texte": "Début de la soirée à la MDE" }
       ],
       "dimanche": [
