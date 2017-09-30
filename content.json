@@ -4,8 +4,8 @@
     "accueil": {
       "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez-vous les 30 Septembre et 1er Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
       "resultats": {
-        "supaero": 3,
-        "ponts": 1
+        "supaero": 6,
+        "ponts": 2
       }
     },
     "informations": {
@@ -110,7 +110,7 @@
         "format": {
           "description": "De 6 à 12 nageurs. Chaque nageur ne peut participer qu'à deux nages individuelles, et aux relais. <br> <b>Nages individuelles</b>: 50m et 100m en papillon, dos, brasse et nage libre <br> <b>Relais mixtes</b>: 4x50m nage libre et 4x50m 4 nages",
           "score": {
-            "supaero": 4,
+            "supaero": 3,
             "ponts": 3
           }
         }
@@ -144,15 +144,15 @@
           "hommes": {
             "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueurs sur le terrain,  jusqu’à 14 joueurs par équipe",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 19,
+              "ponts": 13
             }
           },
           "femmes": {
             "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses sur le terrain,  jusqu’à 14 joueuses par équipe",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 7,
+              "ponts": 14
             }
           }
         }
