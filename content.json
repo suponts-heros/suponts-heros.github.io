@@ -152,7 +152,7 @@
             "description": "Match en 2 mi-temps de 20 minutes, 1 équipe de 7 joueuses sur le terrain,  jusqu’à 14 joueuses par équipe",
             "score": {
               "supaero": 7,
-              "ponts": 14
+              "ponts": 15
             }
           }
         }
@@ -171,7 +171,7 @@
           "femmes": {
             "description": "Match de 2x20min sur petit terrain, 7 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
-              "supaero": 0,
+              "supaero": 9,
               "ponts": 0
             }
           }
