@@ -4,7 +4,7 @@
     "accueil": {
       "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez-vous les 30 Septembre et 1er Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
       "resultats": {
-        "supaero": 2,
+        "supaero": 3,
         "ponts": 1
       }
     },
@@ -51,8 +51,8 @@
           "hommes": {
             "description": "Match en deux sets de 25 points puis 1 set décisif en 15 points si nécessaire 6 joueurs sur le terrain, jusqu’à 9 joueurs par équipe (possibilité d’aligner deux équipes)",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 1,
+              "ponts": 1
             }
           },
           "femmes": {
@@ -71,8 +71,8 @@
           "hommes": {
             "description": "Match de 4x10min dans le gymnase sur le grand terrain. 5 joueurs sur le terrain, jusqu’à 12 joueurs par équipe",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 48,
+              "ponts": 42
             }
           },
           "femmes": {
@@ -164,7 +164,7 @@
           "hommes": {
             "description": "Match de 2x35min sur grand terrain, 15 joueurs sur le terrain, jusqu’à 20 joueurs par équipe",
             "score": {
-              "supaero": 0,
+              "supaero": 83,
               "ponts": 0
             }
           },
