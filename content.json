@@ -49,7 +49,7 @@
         "lieu": "gymnase",
         "format": {
           "hommes": {
-            "description": "Match en deux sets de 25 points puis 1 set décisif en 15 points si nécessaire 6 joueurs sur le terrain, jusqu’à 9 joueurs par équipe (possibilité d’aligner deux équipes)",
+            "description": "Match en un set de 25 points 6 joueurs sur le terrain, jusqu’à 9 joueurs par équipe (possibilité d’aligner deux équipes)",
             "score": {
               "supaero": 1,
               "ponts": 1
