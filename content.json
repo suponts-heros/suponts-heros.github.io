@@ -78,8 +78,8 @@
           "femmes": {
             "description": "Match de 4x10min dans le gymnase sur le petit terrain. 5 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 46,
+              "ponts": 29
             }
           }
         }
@@ -110,8 +110,8 @@
         "format": {
           "description": "De 6 à 12 nageurs. Chaque nageur ne peut participer qu'à deux nages individuelles, et aux relais. <br> <b>Nages individuelles</b>: 50m et 100m en papillon, dos, brasse et nage libre <br> <b>Relais mixtes</b>: 4x50m nage libre et 4x50m 4 nages",
           "score": {
-            "supaero": 0,
-            "ponts": 0
+            "supaero": 4,
+            "ponts": 3
           }
         }
       },
@@ -132,8 +132,8 @@
         "format": {
           "description": "Match de 4x10min dans le bassin. 7 nageurs dans l’eau, jusqu’à 14 nageurs par équipe, 9 nageurs minimum pour constituer l’équipe.",
           "score": {
-            "supaero": 0,
-            "ponts": 0
+            "supaero": 9,
+            "ponts": 8
           }
         }
       },
@@ -184,7 +184,7 @@
           "description": "<b>Qualifications</b>: 7 personnes par école max. L'organisation choisit les voies de niveau 5b à 6c. Les participants ont 1 heure pour essayer les voies qu'ils veulent. Pour valider, il faut arriver à la dernière prise en deux essais + avoir clipé toutes les dégaines. Les deux voies grimpées les mieux cotée sont retenues et les 5 participants ayant grimpé les voies les plus difficiles sont retenus. <br> <b>Finale</b>: Une voie est choisie. Les finalistes sont isolés pour ne pas voir les enchaînements de l'autre. L'ordre de passage est du dernier qualifié au premier. Le vainqueur est celui qui est allé le plus loin en se basant sur la dernière prise, touchée, tenue, validée (par ordre croissant)",
           "score": {
             "supaero": 0,
-            "ponts": 0
+            "ponts": 1
           }
         }
       },
