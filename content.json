@@ -4,8 +4,8 @@
     "accueil": {
       "news": "On vous attend nombreux pour cette édition 2017 avec de l'ambiance, du son, de la bonne bouffe, du sport (mais pas trop hein), et pleins d'évènements préparés avec amour par l'AS pour ravir vos yeux et papilles. Rendez-vous les 30 Septembre et 1er Octobre sur le campus de l'ISAE - Supaéro pour en savoir plus. A bientôt !",
       "resultats": {
-        "supaero": 6,
-        "ponts": 2
+        "supaero": 11,
+        "ponts": 8
       }
     },
     "informations": {
@@ -59,7 +59,7 @@
             "description": "Match en deux sets de 25 points puis un set décisif en 15 points si nécessaire 6 joueuses sur le terrain, jusqu’à 9 joueuses par équipe",
             "score": {
               "supaero": 0,
-              "ponts": 0
+              "ponts": 2
             }
           }
         }
@@ -91,14 +91,14 @@
           "hommes": {
             "description": "Match de 2x45min sur grand terrain 11 joueurs sur le terrain, jusqu’à 16 joueurs par équipe",
             "score": {
-              "supaero": 0,
-              "ponts": 0
+              "supaero": 2,
+              "ponts": 3
             }
           },
           "femmes": {
             "description": "Match de 2x25min sur petit terrain, 7 joueuses sur le terrain, jusqu’à 12 joueuses par équipe",
             "score": {
-              "supaero": 0,
+              "supaero": 2,
               "ponts": 0
             }
           }
@@ -121,8 +121,8 @@
         "format": {
           "description": "Tournoi par équipes de 3 garçons et 2 filles, 3 simples M, 2 simples F, 1 double mixte. Matchs en 2 sets gagnants. Les simples valent 1 point, le double en vaut 2",
           "score": {
-            "supaero": 0,
-            "ponts": 0
+            "supaero": 1,
+            "ponts": 1
           }
         }
       },
@@ -194,8 +194,8 @@
         "format": {
           "description": "Tournoi par équipes de 5 garçons et 2 filles, 3 simples M, 2 simples F, 2 doubles M, 1 double F, 1 double mixte. Matchs en 2 sets gagnants, sets de 15 point",
           "score": {
-            "supaero": 0,
-            "ponts": 0
+            "supaero": 7,
+            "ponts": 2
           }
         }
       },
@@ -206,7 +206,7 @@
           "description": "Au moins 3 musiques différentes, et pas plus de 5 min de show.",
           "score": {
             "supaero": 0,
-            "ponts": 0
+            "ponts": 1
           }
         }
       }
