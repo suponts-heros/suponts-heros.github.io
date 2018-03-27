@@ -1,4 +1,7 @@
 # Webapp Suponts'Héros development
+
+_Author: [Nikola LOHINSKI](https://github.com/NikolaLohinski)_
+
 ## Setup
   * Install [NodeJS](https://nodejs.org/) version 6.11.0 or later. 
   * Clone/Download the repository.
